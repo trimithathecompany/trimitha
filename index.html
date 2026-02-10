@@ -17,14 +17,14 @@
       "name": "Trimitha",
       "description": "A technology-driven company built on Trust, Thought, and Technology with togetherness",
       "url": "https://trimitha.co.in",
-        "image": "https://trimitha.co.in/Images/TrimithaLogo.png"
+      "image": "https://trimitha.co.in/Images/TrimithaLogo.png",
       "sameAs": [
         "https://www.linkedin.com/company/trimitha",
         "https://www.instagram.com/trimitha.co/",
         "https://twitter.com/trimithacompany"
       ],
-        "knowsAbout": ["Web Development", "Entrepreneurship", "UX Design", "Digital Strategy"]
-        "founder": {
+      "knowsAbout": ["Web Development", "Entrepreneurship", "UX Design", "Digital Strategy"],
+      "founder": {
         "@type": "Person",
         "name": "Thrinath Polanki",
         "url": "https://www.linkedin.com/in/thrinathpolanki",
@@ -33,7 +33,7 @@
           "https://twitter.com/thrinath_bfe",
           "https://www.instagram.com/thrinath.polanki"
         ]
-      },
+      }
     }
     </script>
     
@@ -47,7 +47,6 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
-        // Fix: Ensure Tailwind is loaded before configuring
         const configureTailwind = () => {
             if (typeof tailwind !== 'undefined') {
                 tailwind.config = {
@@ -71,7 +70,6 @@
                     }
                 };
             } else {
-                // Retry if tailwind script hasn't executed yet
                 setTimeout(configureTailwind, 50);
             }
         };
@@ -86,16 +84,19 @@
         /* Smooth scrolling */
         html { scroll-behavior: smooth; }
 
-        /* Custom Scrollbar for Sidebar */
-        aside::-webkit-scrollbar {
-            width: 5px;
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        aside::-webkit-scrollbar-track {
+        ::-webkit-scrollbar-track {
             background: #0A2540; 
         }
-        aside::-webkit-scrollbar-thumb {
+        ::-webkit-scrollbar-thumb {
             background: #1e3a5f; 
             border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00D4FF; 
         }
         
         /* Animation for modal */
@@ -112,24 +113,28 @@
         .animate-fade-in-up {
             animation: fadeInUp 0.3s ease-out;
         }
+
+        /* Nav Glass Effect Adjustment */
+        .nav-glass {
+            background-color: rgba(10, 37, 64, 0.95);
+            backdrop-filter: blur(10px);
+        }
     </style>
 </head>
 <body class="bg-white text-slate-800 antialiased selection:bg-[#00D4FF] selection:text-[#0A2540]">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 backdrop-blur-md border-b border-gray-800 transition-all duration-300" style="background-color: rgba(10, 37, 64, 0.95);">
+    <nav class="fixed w-full z-50 border-b border-gray-800 transition-all duration-300 nav-glass">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
-                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-                    <!-- Custom Logo Image: Trimitha Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer z-50">
                     <img src="Images/Trimitha Logo.png" alt="Trimitha Logo" class="h-10 w-auto object-contain">
                     <span class="font-bold text-2xl tracking-tight text-white font-heading">TRIMITHA</span>
                 </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8" id="desktop-menu">
-                    <!-- Public Links -->
                     <div class="public-nav flex items-center space-x-8">
                         <a href="index.html" class="nav-link text-sm font-medium tracking-wide text-white hover:text-[#00D4FF] transition-colors">HOME</a>
                         <a href="about.html" class="nav-link text-sm font-medium tracking-wide text-white hover:text-[#00D4FF] transition-colors">ABOUT</a>
@@ -143,71 +148,79 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button onclick="toggleMobileMenu()" class="text-white">
-                        <i data-lucide="menu" class="w-6 h-6" id="mobile-menu-icon"></i>
+                <div class="md:hidden flex items-center z-50">
+                    <button onclick="toggleMobileMenu()" class="text-white hover:text-[#00D4FF] transition-colors focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-7 h-7" id="mobile-menu-icon"></i>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#0A2540] border-t border-gray-800 px-4 pt-4 pb-6 space-y-4 shadow-xl">
-            <div class="public-nav flex flex-col space-y-4">
-                <a href="index.html" class="text-left text-base font-medium text-white hover:text-[#00D4FF] py-2 px-2 rounded hover:bg-white/5 transition-all">HOME</a>
-                <a href="about.html" class="text-left text-base font-medium text-white hover:text-[#00D4FF] py-2 px-2 rounded hover:bg-white/5 transition-all">ABOUT</a>
-                <a href="services.html" class="text-left text-base font-medium text-white hover:text-[#00D4FF] py-2 px-2 rounded hover:bg-white/5 transition-all">SERVICES</a>
-                <a href="contact.html" class="text-left text-base font-medium text-white hover:text-[#00D4FF] py-2 px-2 rounded hover:bg-white/5 transition-all">CONTACT</a>
-                <div class="pt-4 border-t border-gray-700">
-                    <a href="login.html" class="w-full text-left text-gray-300 py-3 px-2 flex items-center gap-3 hover:text-white transition-colors">
-                        <i data-lucide="lock" class="w-5 h-5"></i> Employee Login
-                    </a>
-                </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full left-0 top-20 bg-[#0A2540] border-t border-gray-800 shadow-2xl overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="flex flex-col p-4 space-y-2">
+                <a href="index.html" class="block text-base font-bold text-white hover:text-[#00D4FF] hover:bg-white/5 py-3 px-4 rounded-lg transition-all">HOME</a>
+                <a href="about.html" class="block text-base font-bold text-white hover:text-[#00D4FF] hover:bg-white/5 py-3 px-4 rounded-lg transition-all">ABOUT</a>
+                <a href="services.html" class="block text-base font-bold text-white hover:text-[#00D4FF] hover:bg-white/5 py-3 px-4 rounded-lg transition-all">SERVICES</a>
+                <a href="contact.html" class="block text-base font-bold text-white hover:text-[#00D4FF] hover:bg-white/5 py-3 px-4 rounded-lg transition-all">CONTACT</a>
+                <div class="h-px bg-gray-700 my-2 mx-4"></div>
+                <a href="login.html" class="block text-base text-gray-300 hover:text-white py-3 px-4 flex items-center gap-3">
+                    <i data-lucide="lock" class="w-5 h-5"></i> Employee Login
+                </a>
             </div>
         </div>
     </nav>
 
     <main>
-        <!-- Hero -->
-        <div class="relative pt-20 min-h-screen flex items-center overflow-hidden bg-[#0A2540]">
+        <!-- Hero Section -->
+        <!-- Fixed: Increased top padding for mobile (pt-32) and optimized spacing -->
+        <div class="relative pt-32 pb-16 md:pt-20 md:pb-0 min-h-screen flex items-center overflow-hidden bg-[#0A2540]">
             <!-- Abstract Background -->
             <div class="absolute inset-0 bg-[#0A2540]">
-                <div class="absolute top-0 right-0 w-2/3 h-full bg-[#0d2e4f] opacity-50 transform -skew-x-12 translate-x-20"></div>
-                <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-[#00D4FF] opacity-5 blur-[120px] rounded-full"></div>
+                <!-- Fixed: Adjusted background skew width/opacity for mobile readability -->
+                <div class="absolute top-0 right-0 w-full md:w-2/3 h-full bg-[#0d2e4f] opacity-30 md:opacity-50 transform -skew-x-12 md:translate-x-20 translate-x-10"></div>
+                <div class="absolute bottom-0 left-0 w-3/4 md:w-1/2 h-1/2 bg-[#00D4FF] opacity-10 md:opacity-5 blur-[80px] md:blur-[120px] rounded-full"></div>
             </div>
 
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid md:grid-cols-2 gap-12 items-center py-12 md:py-0">
-                <div class="text-left space-y-8 z-10">
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-12 items-center">
+                
+                <!-- Text Content -->
+                <div class="text-left space-y-6 md:space-y-8 z-10 order-1">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#00D4FF] bg-[#00D4FF]/10 text-[#00D4FF] text-xs font-bold tracking-wider">
                         WELCOME TO TRIMITHA
                     </div>
-                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight font-heading">
-                        Synergy in <br />
+                    
+                    <!-- Fixed: Responsive text sizes for better mobile wrapping -->
+                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-[1.15] font-heading">
+                        Synergy in <br class="hidden sm:block" />
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#008ba6]">Motion.</span>
                     </h1>
-                    <p class="text-lg text-gray-300 max-w-lg leading-relaxed">
+                    
+                    <p class="text-base sm:text-lg text-gray-300 max-w-lg leading-relaxed">
                         Where people and ideas align through trust. Powered by three, built for long-term growth.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="services.html" class="px-6 py-3 rounded-md font-semibold transition-all duration-300 flex items-center justify-center gap-2 bg-[#00D4FF] text-[#0A2540] hover:brightness-110 shadow-lg shadow-teal-500/20">
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a href="services.html" class="w-full sm:w-auto px-6 py-3.5 rounded-md font-semibold transition-all duration-300 flex items-center justify-center gap-2 bg-[#00D4FF] text-[#0A2540] hover:brightness-110 shadow-lg shadow-teal-500/20 active:scale-95">
                             Explore Services
                         </a>
-                        <button onclick="openOurStoryModal()" class="px-6 py-3 rounded-md font-semibold transition-all duration-300 flex items-center justify-center gap-2 border-2 border-[#00D4FF] text-[#00D4FF] hover:bg-[#00D4FF] hover:text-[#0A2540]">
+                        <button onclick="openOurStoryModal()" class="w-full sm:w-auto px-6 py-3.5 rounded-md font-semibold transition-all duration-300 flex items-center justify-center gap-2 border-2 border-[#00D4FF] text-[#00D4FF] hover:bg-[#00D4FF] hover:text-[#0A2540] active:scale-95">
                             Our Story
                         </button>
                     </div>
                 </div>
                 
                 <!-- Abstract Graphic -->
-                <div class="flex justify-center relative mt-8 md:mt-0">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80">
-                        <!-- Retained spinning borders -->
+                <div class="flex justify-center relative order-2 md:order-2 mt-4 md:mt-0">
+                    <!-- Fixed: Responsive width/height for graphic (w-48 on mobile, w-80 on desktop) -->
+                    <div class="relative w-56 h-56 md:w-80 md:h-80 transition-all duration-500">
+                        <!-- Spinning borders -->
                         <div class="absolute inset-0 border-2 border-[#C5A059] rounded-full animate-spin-slow opacity-30"></div>
                         <div class="absolute inset-4 border-2 border-[#00D4FF] rounded-full animate-spin-reverse opacity-40"></div>
                         
-                        <!-- Custom Hero Logo Image: Trimitha Logo -->
+                        <!-- Logo -->
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <img src="Images/Trimitha Logo.png" alt="Trimitha Hero Graphic" class="w-32 h-32 object-contain">
+                            <img src="Images/Trimitha Logo.png" alt="Trimitha Hero Graphic" class="w-28 h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_15px_rgba(0,212,255,0.3)]">
                         </div>
                     </div>
                 </div>
@@ -215,12 +228,12 @@
         </div>
 
         <!-- Services Section -->
-        <div class="py-24 bg-white">
+        <div class="py-20 md:py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-[#0A2540] text-3xl font-bold mb-4 font-heading">Our Methodology</h2>
                     <div class="w-20 h-1 bg-[#C5A059] mx-auto"></div>
-                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
                         The Trimitha approach divides complex challenges into three manageable phases.
                     </p>
                 </div>
@@ -232,7 +245,7 @@
                             <i data-lucide="zap" class="w-8 h-8 text-[#0A2540] transition-colors group-hover:text-[#00D4FF]"></i>
                         </div>
                         <h3 class="text-xl font-bold text-[#0A2540] mb-3 font-heading">Consulting & Ideation</h3>
-                        <p class="text-gray-600 leading-relaxed">Strategic planning to align your three core pillars of growth.</p>
+                        <p class="text-gray-600 leading-relaxed text-sm">Strategic planning to align your three core pillars of growth.</p>
                     </div>
                     <!-- Service 2 -->
                     <div class="group p-8 rounded-xl border border-gray-100 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
@@ -240,7 +253,7 @@
                             <i data-lucide="layers" class="w-8 h-8 text-[#0A2540] transition-colors group-hover:text-[#00D4FF]"></i>
                         </div>
                         <h3 class="text-xl font-bold text-[#0A2540] mb-3 font-heading">Development & Execution</h3>
-                        <p class="text-gray-600 leading-relaxed">Building robust architectures that scale with your vision.</p>
+                        <p class="text-gray-600 leading-relaxed text-sm">Building robust architectures that scale with your vision.</p>
                     </div>
                     <!-- Service 3 -->
                     <div class="group p-8 rounded-xl border border-gray-100 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
@@ -248,20 +261,20 @@
                             <i data-lucide="bar-chart" class="w-8 h-8 text-[#0A2540] transition-colors group-hover:text-[#00D4FF]"></i>
                         </div>
                         <h3 class="text-xl font-bold text-[#0A2540] mb-3 font-heading">Growth & Maintenance</h3>
-                        <p class="text-gray-600 leading-relaxed">Continuous optimization to ensure long-term synergy.</p>
+                        <p class="text-gray-600 leading-relaxed text-sm">Continuous optimization to ensure long-term synergy.</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- About Preview -->
-        <div class="py-24 bg-[#F4F6F8]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center">
-                <div class="relative">
+        <div class="py-20 md:py-24 bg-[#F4F6F8]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <div class="relative order-2 md:order-1">
                     <div class="absolute -top-4 -left-4 w-24 h-24 bg-[#C5A059] opacity-20 rounded-tl-3xl"></div>
                     <div class="bg-white p-8 rounded-lg shadow-lg relative z-10">
                         <h3 class="text-2xl font-bold text-[#0A2540] mb-4 font-heading">The Power of Three</h3>
-                        <p class="text-gray-600 mb-6">
+                        <p class="text-gray-600 mb-6 text-sm md:text-base">
                             Our name "Trimitha" comes from the ancient concept of trinities. We believe the strongest structures stand on three legs: 
                         </p>
                         <ul class="space-y-4">
@@ -280,9 +293,9 @@
                         </ul>
                     </div>
                 </div>
-                <div>
-                    <h2 class="text-3xl font-bold text-[#0A2540] mb-6 font-heading">Building Bridges Between Ideas</h2>
-                    <p class="text-gray-600 leading-relaxed mb-8">
+                <div class="order-1 md:order-2">
+                    <h2 class="text-2xl md:text-3xl font-bold text-[#0A2540] mb-6 font-heading">Building Bridges Between Ideas</h2>
+                    <p class="text-gray-600 leading-relaxed mb-8 text-sm md:text-base">
                         Trimitha began with a simple belief: progress is strongest when built together. What started as a shared thought among like-minded individuals grew into a company founded on trust, collaboration, and unity of purpose. Built on the principles of Trust, Thought, and Technology with Togetherness, Trimitha brings people and ideas into alignment to create meaningful and lasting outcomes.
                     </p>
                     <a href="about.html" class="inline-flex items-center gap-2 text-[#00D4FF] font-semibold hover:underline">
@@ -295,12 +308,11 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#0A2540] text-white pt-20 pb-10">
+    <footer class="bg-[#0A2540] text-white pt-16 md:pt-20 pb-10 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-1 md:col-span-1">
                     <div class="flex items-center gap-2 mb-6">
-                        <!-- Custom Logo SVG Footer -->
                         <img src="Images/Trimitha Logo.png" alt="Trimitha Logo" class="h-10 w-auto object-contain">
                         <span class="font-bold text-xl font-heading">TRIMITHA</span>
                     </div>
@@ -312,27 +324,27 @@
                 <div>
                     <h4 class="font-bold text-[#C5A059] mb-6 font-heading">Navigation</h4>
                     <ul class="space-y-3 text-gray-300 text-sm">
-                        <li><a href="index.html" class="hover:text-[#00D4FF]">Home</a></li>
-                        <li><a href="about.html" class="hover:text-[#00D4FF]">About Us</a></li>
-                        <li><a href="services.html" class="hover:text-[#00D4FF]">Services</a></li>
-                        <li><a href="contact.html" class="hover:text-[#00D4FF]">Careers</a></li>
+                        <li><a href="index.html" class="hover:text-[#00D4FF] transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-[#00D4FF] transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-[#00D4FF] transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-[#00D4FF] transition-colors">Careers</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="font-bold text-[#C5A059] mb-6 font-heading">Legal</h4>
                     <ul class="space-y-3 text-gray-300 text-sm">
-                        <li><a href="privacy.html" class="hover:text-[#00D4FF]">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="hover:text-[#00D4FF]">Terms & Conditions</a></li>
-                        <li><a href="disclaimer.html" class="hover:text-[#00D4FF]">Disclaimer</a></li>
+                        <li><a href="privacy.html" class="hover:text-[#00D4FF] transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-[#00D4FF] transition-colors">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-[#00D4FF] transition-colors">Disclaimer</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="font-bold text-[#C5A059] mb-6 font-heading">Contact</h4>
                     <ul class="space-y-3 text-gray-300 text-sm">
-                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Proddatur, India</li>
-                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> contact@trimitha.co.in</li>
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-[#00D4FF]"></i> Proddatur, India</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-[#00D4FF]"></i> contact@trimitha.co.in</li>
                     </ul>
                 </div>
             </div>
@@ -355,11 +367,11 @@
     </footer>
 
     <!-- Our Story Modal -->
-    <div id="modal-our-story" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+    <div id="modal-our-story" class="fixed inset-0 bg-black/50 z-[100] hidden flex items-center justify-center p-4 backdrop-blur-sm">
         <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl overflow-hidden animate-fade-in-up">
             <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-[#F4F6F8]">
                 <h3 class="font-bold text-[#0A2540] text-xl font-heading">Our Story</h3>
-                <button onclick="closeModal('modal-our-story')" class="text-gray-400 hover:text-red-500"><i data-lucide="x" class="w-5 h-5"></i></button>
+                <button onclick="closeModal('modal-our-story')" class="text-gray-400 hover:text-red-500 transition-colors"><i data-lucide="x" class="w-5 h-5"></i></button>
             </div>
             <div class="p-8 text-gray-600 leading-relaxed space-y-4">
                 <p class="text-lg font-medium text-[#0A2540]">
@@ -385,8 +397,11 @@
         // Mobile menu toggle
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            
             if (mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.remove('hidden');
+                // Optional: Change icon to X if desired, but not strictly necessary with the current setup
             } else {
                 mobileMenu.classList.add('hidden');
             }
@@ -396,11 +411,15 @@
         // Modal functions
         function openOurStoryModal() {
             document.getElementById('modal-our-story').classList.remove('hidden');
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
             lucide.createIcons();
         }
 
         function closeModal(modalId) {
             document.getElementById(modalId).classList.add('hidden');
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
         }
 
         // Close modal when clicking outside
