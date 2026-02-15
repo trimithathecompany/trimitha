@@ -27,10 +27,13 @@
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-dark-bg dark:text-slate-100 font-sans antialiased transition-colors duration-300">
 
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center"><a href="index.html" class="font-heading font-bold text-2xl tracking-tight z-50">Thrinath<span class="text-brand-500"> Polanki</span></a></div>
+                <div class="flex-shrink-0 flex items-center"><a href="index.html" class="font-heading font-bold text-2xl tracking-tight z-50">Thrinath<span class="text-brand-500">.</span></a></div>
+                
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-sm font-medium hover:text-brand-500 transition-colors">Home</a>
                     <a href="index.html#about" class="text-sm font-medium hover:text-brand-500 transition-colors">About</a>
@@ -41,12 +44,16 @@
                     <a href="index.html#contact" class="px-5 py-2.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold hover:opacity-90 transition-all shadow-md">Let's Connect</a>
                     <button id="theme-toggle" class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors focus:outline-none"><i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline text-yellow-400"></i></button>
                 </div>
+
+                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center gap-4">
                     <button id="mobile-theme-toggle" class="p-2 text-slate-700 dark:text-slate-300 focus:outline-none"><i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline text-yellow-400"></i></button>
                     <button id="mobile-menu-btn" class="text-slate-900 dark:text-white p-2 focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
                 </div>
             </div>
         </div>
+        
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark-card border-b dark:border-dark-border shadow-xl absolute w-full left-0 top-20">
             <div class="px-4 pt-2 pb-6 space-y-2 text-center">
                 <a href="index.html" class="block px-3 py-3 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Home</a>
@@ -60,14 +67,24 @@
         </div>
     </nav>
 
+    <!-- Header Section -->
     <header class="pt-32 pb-12 bg-slate-50 dark:bg-dark-bg px-4">
         <div class="max-w-4xl mx-auto text-center">
             <span class="text-brand-600 dark:text-brand-400 font-semibold tracking-wide uppercase text-sm mb-2 block">Insights & Thoughts</span>
             <h1 class="font-heading text-4xl md:text-5xl font-bold mb-4 dark:text-white">The Founder's Journal</h1>
-            <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">Thoughts on technology, startups, and the journey of building Trimitha.</p>
+            <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto mb-8">Thoughts on technology, startups, and the journey of building Trimitha.</p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-lg mx-auto relative group">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <i class="fas fa-search text-slate-400 group-focus-within:text-brand-500 transition-colors"></i>
+                </div>
+                <input type="text" id="search-input" placeholder="Search by title or category..." class="block w-full pl-11 pr-4 py-3 bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-700 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent shadow-sm dark:text-white transition-all placeholder-slate-400 dark:placeholder-slate-500" oninput="filterPosts()">
+            </div>
         </div>
     </header>
 
+    <!-- Blog Grid -->
     <section class="pb-24 bg-slate-50 dark:bg-dark-bg min-h-screen px-4">
         <div class="max-w-7xl mx-auto">
             <div id="blog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -101,9 +118,10 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span class="font-heading font-bold text-2xl text-white block mb-2">Thrinath<span class="text-brand-500">.</span></span>
+            <span class="font-heading font-bold text-2xl text-white block mb-2">Thrinath<span class="text-brand-500"> Polanki</span></span>
             <p class="text-sm">Founder of Trimitha</p>
             <p class="text-xs mt-8">&copy; 2026 Thrinath Polanki. All rights reserved.</p>
         </div>
@@ -115,16 +133,29 @@
         // ------------------------------------
         const API_URL = 'https://script.google.com/macros/s/AKfycbyFay7jAsZkFrPbYaHzMOh_aofKyGV1fweLT4__jsVgSA6MI6sfNeH_v6yBW-wChj7MRw/exec'; 
 
+        let allPosts = []; // Store posts globally for searching
+
         async function fetchPosts() {
             try {
                 if(API_URL === 'YOUR_APPSCRIPT_WEB_APP_URL') { renderError("Config Error: Paste Web App URL."); return; }
                 const response = await fetch(`${API_URL}?t=${new Date().getTime()}`, { method: 'GET', redirect: "follow", headers: { "Content-Type": "text/plain;charset=utf-8" } });
                 if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
-                renderPosts(await response.json());
+                
+                allPosts = await response.json(); // Save to global variable
+                renderPosts(allPosts);
             } catch (error) {
                 console.error(error);
                 renderError("Unable to load posts. Check your deployment.");
             }
+        }
+
+        function filterPosts() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const filtered = allPosts.filter(post => 
+                post.title.toLowerCase().includes(query) || 
+                post.category.toLowerCase().includes(query)
+            );
+            renderPosts(filtered);
         }
 
         function renderError(msg) {
@@ -134,9 +165,16 @@
         function renderPosts(posts) {
             const grid = document.getElementById('blog-grid');
             grid.innerHTML = '';
-            if (!posts || posts.length === 0) { grid.innerHTML = `<div class="col-span-full text-center py-10 text-slate-500">No posts published yet.</div>`; return; }
+            
+            if (!posts || posts.length === 0) { 
+                grid.innerHTML = `<div class="col-span-full text-center py-10 text-slate-500">No posts found.</div>`; 
+                return; 
+            }
 
-            posts.reverse().forEach(post => {
+            // Copy array to reverse for display (newest first) without mutating original if filtering
+            const displayPosts = [...posts].reverse();
+
+            displayPosts.forEach(post => {
                 const article = document.createElement('article');
                 article.className = 'bg-white dark:bg-dark-card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 flex flex-col h-full animate-[fadeInUp_0.5s_ease-out]';
                 const fallbackImg = `https://ui-avatars.com/api/?name=${encodeURIComponent(post.title)}&background=random&color=fff&size=500`;
@@ -179,10 +217,27 @@
 
         fetchPosts();
 
-        const themeToggle = document.getElementById('theme-toggle');
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark');
-        themeToggle.addEventListener('click', () => { document.documentElement.classList.toggle('dark'); localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light'); });
+        // Consolidated Theme Toggle Logic
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
 
+        // Initialize Theme
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Attach Event Listeners to both Desktop and Mobile buttons
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        if (mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
+
+        // Mobile Menu Logic
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         if (mobileBtn && mobileMenu) {
