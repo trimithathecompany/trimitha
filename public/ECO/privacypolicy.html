@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Sector Stock Scout</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#ecfeff',
+                            100: '#cffafe',
+                            500: '#06b6d4', // Cyan mapping to match logo
+                            600: '#0891b2',
+                            900: '#164e63',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .toc-link.active {
+            color: #0891b2;
+            font-weight: 600;
+            border-left-color: #06b6d4;
+            background-color: #ecfeff;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-100 selection:text-brand-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-md">
+                        <i data-lucide="trending-up" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Sector Stock Scout</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-brand-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+            <div class="absolute top-20 right-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+                Privacy Policy
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
+                Your data privacy and transparency matter to us. Learn how we handle your information and understand the educational scope of our platform.
+            </p>
+            <div class="mt-8 flex justify-center items-center text-sm text-slate-500 space-x-4">
+                <span class="flex items-center"><i data-lucide="calendar" class="w-4 h-4 mr-2"></i> Last Updated: April 2026</span>
+                <span class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-2"></i> 5 min read</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+            
+            <!-- Sidebar / Table of Contents -->
+            <aside class="lg:w-1/4 mb-6 lg:mb-0">
+                <div class="relative lg:sticky lg:top-28 z-30">
+                    <div class="glass-card rounded-xl shadow-sm overflow-hidden border border-slate-200">
+                        <!-- Mobile Toggle Header -->
+                        <button id="mobile-toc-toggle" class="lg:hidden w-full px-5 py-4 flex justify-between items-center bg-white text-slate-700 hover:bg-slate-50 transition-colors focus:outline-none">
+                            <span class="font-bold uppercase tracking-wider text-sm">Table of Contents</span>
+                            <i data-lucide="chevron-down" id="toc-icon" class="w-4 h-4 text-slate-500 transition-transform duration-300"></i>
+                        </button>
+                        
+                        <!-- TOC Content -->
+                        <div id="toc-content" class="hidden lg:block px-6 pb-6 lg:pt-6 border-t border-slate-100 lg:border-t-0">
+                            <h3 class="hidden lg:block text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Table of Contents</h3>
+                            <nav class="space-y-1 max-h-[60vh] overflow-y-auto pr-2" id="toc">
+                                <a href="#introduction" class="toc-link block px-3 py-2 text-sm text-slate-600 border-l-2 border-transparent hover:border-brand-500 hover:text-brand-600 transition-colors rounded-r-md">1. Introduction</a>
+                                <a href="#information-we-collect" class="toc-link block px-3 py-2 text-sm text-slate-600 border-l-2 border-transparent hover:border-brand-500 hover:text-brand-600 transition-colors rounded-r-md">2. Information We Collect</a>
+                                <a href="#how-we-use" class="toc-link block px-3 py-2 text-sm text-slate-600 border-l-2 border-transparent hover:border-brand-500 hover:text-brand-600 transition-colors rounded-r-md">3. How We Use Information</a>
+                                <a href="#data-sharing" class="toc-link block px-3 py-2 text-sm text-slate-600 border-l-2 border-transparent hover:border-brand-500 hover:text-brand-600 transition-colors rounded-r-md">4. Data Sharing Policy</a>
+                                <a href="#financial-disclaimer" class="toc-link block px-3 py-2 text-sm text-slate-600 border-l-2 border-transparent hover:border-brand-500 hover:text-brand-600 transition-colors rounded-r-md">5. AI & Financial Disclaimer</a>
+                                <a href="#data-security" class="toc-link block px-3 py-2 text-sm text-slate-600 border-l-2 border-transparent hover:border-brand-500 hover:text-brand-600 transition-colors rounded-r-md">6. Data Security</a>
+                                <a href="#user-responsibility" class="toc-link block px-3 py-2 text-sm text-slate-600 border-l-2 border-transparent hover:border-brand-500 hover:text-brand-600 transition-colors rounded-r-md">7. User Responsibility</a>
+                                <a href="#cookies" class="toc-link block px-3 py-2 text-sm text-slate-600 border-l-2 border-transparent hover:border-brand-500 hover:text-brand-600 transition-colors rounded-r-md">8. Cookies & Tracking</a>
+                                <a href="#updates" class="toc-link block px-3 py-2 text-sm text-slate-600 border-l-2 border-transparent hover:border-brand-500 hover:text-brand-600 transition-colors rounded-r-md">9. Updates to Policy</a>
+                                <a href="#contact" class="toc-link block px-3 py-2 text-sm text-slate-600 border-l-2 border-transparent hover:border-brand-500 hover:text-brand-600 transition-colors rounded-r-md">10. Contact Information</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Policy Content -->
+            <main class="lg:w-3/4 space-y-12">
+                
+                <!-- Section 1 -->
+                <section id="introduction" class="scroll-mt-28">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
+                            <i data-lucide="info" class="w-5 h-5"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">1. Introduction</h2>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-slate-200 text-slate-600 leading-relaxed space-y-4">
+                        <p>Welcome to <strong>Sector Stock Scout</strong>. We are committed to protecting your privacy and ensuring transparency in how we operate. This custom GPT tool is specifically designed to identify and analyze Indian stocks in the ₹30–₹50 price range using sector momentum and volume signals for short-term (2–3 month) perspectives.</p>
+                        <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-4 flex items-start space-x-3">
+                            <i data-lucide="alert-circle" class="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0"></i>
+                            <p class="text-sm text-amber-800 m-0"><strong>Crucial Notice:</strong> Sector Stock Scout is strictly for <strong>educational and informational purposes only</strong>. It does not provide financial, investment, or trading advice.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2 -->
+                <section id="information-we-collect" class="scroll-mt-28">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
+                            <i data-lucide="database" class="w-5 h-5"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">2. Information We Collect</h2>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-slate-200 text-slate-600 leading-relaxed">
+                        <p class="mb-4">To provide you with tailored educational insights, we collect the following types of information when you interact with the tool:</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i data-lucide="message-square" class="w-5 h-5 text-brand-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-800 block">User Inputs</strong>
+                                    We process the queries you submit, including specific sector names, stock queries, and analytical questions you ask the GPT.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="activity" class="w-5 h-5 text-brand-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-800 block">Usage Data</strong>
+                                    Information on how you interact with the tool, such as your preferences and the frequency of your queries, to help us optimize the experience.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="smartphone" class="w-5 h-5 text-brand-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-800 block">Technical Data</strong>
+                                    Standard connection information, including device type, browser information, and generalized location to ensure optimal performance across platforms.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Section 3 -->
+                <section id="how-we-use" class="scroll-mt-28">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
+                            <i data-lucide="settings" class="w-5 h-5"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">3. How We Use Information</h2>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-slate-200 text-slate-600 leading-relaxed">
+                        <p class="mb-4">The data we collect is utilized strictly to maintain and enhance the Sector Stock Scout experience:</p>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-100">
+                                <strong class="text-slate-800 block mb-1">Improve Analysis</strong>
+                                <span class="text-sm">To generate more accurate and relevant educational breakdowns of sector momentum.</span>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-100">
+                                <strong class="text-slate-800 block mb-1">Enhance Experience</strong>
+                                <span class="text-sm">To refine the user interface and tailor responses to standard query patterns.</span>
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-100 sm:col-span-2">
+                                <strong class="text-slate-800 block mb-1">System Performance</strong>
+                                <span class="text-sm">To monitor technical health, debug issues, and ensure the tool remains highly available and secure.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4 -->
+                <section id="data-sharing" class="scroll-mt-28">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
+                            <i data-lucide="share-2" class="w-5 h-5"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">4. Data Sharing Policy</h2>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-slate-200 text-slate-600 leading-relaxed space-y-4">
+                        <p>We believe in strict data minimization. <strong>We do not sell your personal data to any third parties under any circumstances.</strong></p>
+                        <p>Information may only be shared under the following conditions:</p>
+                        <ul class="list-disc pl-5 space-y-2 marker:text-brand-500">
+                            <li><strong>Service Providers:</strong> With underlying infrastructure providers (like OpenAI) solely for the purpose of generating the AI responses you request.</li>
+                            <li><strong>Legal Compliance:</strong> If required by law, regulation, or legal process to protect the rights, property, or safety of our users or the public.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Section 5 -->
+                <section id="financial-disclaimer" class="scroll-mt-28">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-red-600">
+                            <i data-lucide="trending-down" class="w-5 h-5"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">5. AI & Financial Disclaimer</h2>
+                    </div>
+                    <div class="bg-gradient-to-br from-white to-red-50/30 rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-red-100 text-slate-700 leading-relaxed border-l-4 border-red-500">
+                        <h4 class="font-bold text-lg text-slate-900 mb-2">Not Financial Advice</h4>
+                        <p class="mb-4">Sector Stock Scout is a technology tool designed to interpret market volume and momentum data for educational purposes. <strong>It is not a registered investment advisor, broker, or financial institution.</strong></p>
+                        
+                        <h4 class="font-bold text-lg text-slate-900 mb-2 mt-6">No Guarantee of Returns</h4>
+                        <p class="mb-4">Stock markets are highly volatile, especially in the ₹30–₹50 micro/small-cap segment. Past performance, momentum signals, and volume spikes do not guarantee future results. You may lose your entire capital.</p>
+
+                        <h4 class="font-bold text-lg text-slate-900 mb-2 mt-6">AI Limitations</h4>
+                        <p>AI-generated outputs rely on historical patterns and publicly available data. They may <strong>not be real-time</strong>, fully accurate, or account for sudden fundamental shifts, news events, or regulatory changes.</p>
+                    </div>
+                </section>
+
+                <!-- Section 6 -->
+                <section id="data-security" class="scroll-mt-28">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
+                            <i data-lucide="shield-check" class="w-5 h-5"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">6. Data Security</h2>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-slate-200 text-slate-600 leading-relaxed">
+                        <p>We implement commercially reasonable technical and organizational measures to protect your interactions with Sector Stock Scout. While no system is completely impenetrable, we utilize standard encryption protocols and secure server infrastructures to safeguard data against unauthorized access, alteration, or destruction.</p>
+                    </div>
+                </section>
+
+                <!-- Section 7 -->
+                <section id="user-responsibility" class="scroll-mt-28">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
+                            <i data-lucide="user-check" class="w-5 h-5"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">7. User Responsibility</h2>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-slate-200 text-slate-600 leading-relaxed">
+                        <p>By using this tool, you acknowledge and agree that:</p>
+                        <div class="mt-4 space-y-3">
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i data-lucide="check" class="w-3 h-3"></i>
+                                </div>
+                                <span>You must verify all stock data independently before taking action.</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i data-lucide="check" class="w-3 h-3"></i>
+                                </div>
+                                <span>You will conduct thorough personal due diligence or consult a certified financial planner.</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i data-lucide="check" class="w-3 h-3"></i>
+                                </div>
+                                <span>You assume full responsibility for any trades or investments you execute.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 8 -->
+                <section id="cookies" class="scroll-mt-28">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
+                            <i data-lucide="cookie" class="w-5 h-5"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">8. Cookies & Tracking</h2>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-slate-200 text-slate-600 leading-relaxed">
+                        <p>We may use simple cookies or local storage to save your basic session preferences. These are minimal and designed only to keep your tool experience seamless. You can optionally clear these via your browser settings at any time without heavily degrading the core service.</p>
+                    </div>
+                </section>
+
+                <!-- Section 9 -->
+                <section id="updates" class="scroll-mt-28">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
+                            <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">9. Updates to Policy</h2>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-slate-200 text-slate-600 leading-relaxed">
+                        <p>The financial technology landscape evolves rapidly. We may update this Privacy Policy from time to time to reflect changes in our tool, AI integrations, or legal requirements. We encourage you to review this page periodically. Continued use of Sector Stock Scout constitutes acceptance of the latest policy terms.</p>
+                    </div>
+                </section>
+
+                <!-- Section 10 -->
+                <section id="contact" class="scroll-mt-28">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900">10. Contact Information</h2>
+                    </div>
+                    <div class="bg-brand-900 rounded-2xl p-6 md:p-8 shadow-md text-white text-center sm:text-left flex flex-col sm:flex-row items-center justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Have questions regarding your data?</h3>
+                            <p class="text-brand-100 text-sm">We are here to provide transparency and support.</p>
+                        </div>
+                        <a href="mailto:contact@trimitha.co.in" class="mt-6 sm:mt-0 inline-flex items-center justify-center px-6 py-3 border border-transparent text-sm font-medium rounded-lg text-brand-900 bg-white hover:bg-brand-50 transition-colors shadow-sm hover:shadow">
+                            <i data-lucide="send" class="w-4 h-4 mr-2"></i>
+                            contact@trimitha.co.in
+                        </a>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
+            
+            <div class="flex items-center justify-center space-x-2 mb-6">
+                <span class="text-slate-500 font-medium text-sm">Powered by</span>
+                <a href="https://trimitha.co.in" target="_blank" rel="noopener noreferrer" class="group flex items-center transition-opacity hover:opacity-80">
+                    <span class="sr-only">Trimitha</span>
+                    <!-- Trimitha Logo Placeholder injected as requested -->
+                    <img src="Images/Trimitha Logo.png" alt="Trimitha Logo" class="h-6 w-auto object-contain drop-shadow-sm group-hover:drop-shadow transition-all">
+                </a>
+            </div>
+            
+            <div class="text-xs text-slate-400 space-y-2 max-w-2xl mx-auto px-4">
+                <p>Sector Stock Scout – Educational stock screening GPT for Indian equities (₹30–₹50 range).</p>
+                <p>Not SEBI registered. Past performance does not guarantee future results.</p>
+                <p>&copy; 2026 Trimitha — Transparency & trust first</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-6 right-6 p-3 rounded-full bg-brand-600 text-white shadow-lg hover:bg-brand-700 hover:shadow-xl transition-all duration-300 translate-y-20 opacity-0 z-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Initialize Icons and Scroll Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar blur effect on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('bg-transparent', 'glass-card');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Intersection Observer for Table of Contents highlighting
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.toc-link');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-120px 0px -60% 0px', // Trigger roughly near the top
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const currentId = entry.target.getAttribute('id');
+                        
+                        // Remove active class from all links
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        
+                        // Add active class to corresponding link
+                        const activeLink = document.querySelector(`.toc-link[href="#${currentId}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Mobile TOC Toggle Logic
+            const mobileTocToggle = document.getElementById('mobile-toc-toggle');
+            const tocContent = document.getElementById('toc-content');
+            const tocIcon = document.getElementById('toc-icon');
+
+            if (mobileTocToggle) {
+                mobileTocToggle.addEventListener('click', () => {
+                    tocContent.classList.toggle('hidden');
+                    tocIcon.classList.toggle('rotate-180');
+                });
+            }
+
+            // Close mobile TOC when a link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 1024 && tocContent) { // Close if on mobile (lg breakpoint)
+                        tocContent.classList.add('hidden');
+                        tocIcon.classList.remove('rotate-180');
+                    }
+                });
+            });
+
+            // Back to Top Button Logic
+            const backToTopBtn = document.getElementById('back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.remove('translate-y-20', 'opacity-0');
+                    backToTopBtn.classList.add('translate-y-0', 'opacity-100');
+                } else {
+                    backToTopBtn.classList.add('translate-y-20', 'opacity-0');
+                    backToTopBtn.classList.remove('translate-y-0', 'opacity-100');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
