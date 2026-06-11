@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+    xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
 
     <url>
         <loc>https://www.trimitha.co.in/</loc>
@@ -42,7 +44,7 @@
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-  
+
     <url>
         <loc>https://www.trimitha.co.in/disclaimer.html</loc>
         <changefreq>weekly</changefreq>
@@ -53,17 +55,71 @@
         <loc>https://www.trimitha.co.in/founder/index.html</loc>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
+
+        <image:image>
+            <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-1.png</image:loc>
+            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-2.png</image:loc>
+            <image:title>Thrinath Polanki Student Entrepreneur and Founder of Trimitha</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-3.png</image:loc>
+            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-4.png</image:loc>
+            <image:title>Thrinath Polanki Student Entrepreneur and Founder of Trimitha</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-6.png</image:loc>
+            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-7.png</image:loc>
+            <image:title>Thrinath Polanki Student Entrepreneur and Founder of Trimitha</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-8.png</image:loc>
+            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-9.png</image:loc>
+            <image:title>Thrinath Polanki Student Entrepreneur and Founder of Trimitha</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-5.png</image:loc>
+            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
+        </image:image>
     </url>
 
     <url>
         <loc>https://www.trimitha.co.in/founder/personal.html</loc>
-        <changefreq>monthly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-10.png</image:loc>
+            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-family-1.png</image:loc>
+            <image:title>Thrinath Polanki Family</image:title>
+        </image:image>
     </url>
 
     <url>
         <loc>https://www.trimitha.co.in/founder/blog.html</loc>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
 
@@ -73,95 +129,4 @@
         <priority>0.7</priority>
     </url>
 
-    <url>
-        <loc>https://trimitha.co.in/founder</loc>
-
-        <image:image>
-            <image:loc>https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-1.png</image:loc>
-            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
-        </image:image>
-    </url>
-
-    <url>
-        <loc>https://trimitha.co.in/founder</loc>
-
-        <image:image>
-            <image:loc>https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-2.png</image:loc>
-            <image:title>Thrinath Polanki Student Entrepreneur and Founder of Trimitha</image:title>
-        </image:image>
-    </url>
-
-    <url>
-        <loc>https://trimitha.co.in/founder</loc>
-
-        <image:image>
-            <image:loc>https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-3.png</image:loc>
-            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
-        </image:image>
-    </url>
-
-    <url>
-        <loc>https://trimitha.co.in/founder</loc>
-
-        <image:image>
-            <image:loc>https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-4.png</image:loc>
-            <image:title>Thrinath Polanki Student Entrepreneur and Founder of Trimitha</image:title>
-        </image:image>
-    </url>
-
-    <url>
-        <loc>https://trimitha.co.in/founder/personal.html</loc>
-
-        <image:image>
-            <image:loc>https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-5.png</image:loc>
-            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
-        </image:image>
-    </url>
-
-    <url>
-        <loc>https://trimitha.co.in/founder</loc>
-
-        <image:image>
-            <image:loc>https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-6.png</image:loc>
-            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
-        </image:image>
-    </url>
-
-    <url>
-        <loc>https://trimitha.co.in/founder</loc>
-
-        <image:image>
-            <image:loc>https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-7.png</image:loc>
-            <image:title>Thrinath Polanki Student Entrepreneur and Founder of Trimitha</image:title>
-        </image:image>
-    </url>
-
-    <url>
-        <loc>https://trimitha.co.in/founder</loc>
-
-        <image:image>
-            <image:loc>https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-8.png</image:loc>
-            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
-        </image:image>
-    </url>
-
-    <url>
-        <loc>https://trimitha.co.in/founder</loc>
-
-        <image:image>
-            <image:loc>https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-9.png</image:loc>
-            <image:title>Thrinath Polanki Student Entrepreneur and Founder of Trimitha</image:title>
-        </image:image>
-    </url>
-
-    <url>
-        <loc>https://trimitha.co.in/founder/personal.html</loc>
-
-        <image:image>
-            <image:loc>https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-10.png</image:loc>
-            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
-        </image:image>
-    </url>
-
-  
 </urlset>
