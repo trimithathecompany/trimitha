@@ -129,4 +129,10 @@
         <priority>0.7</priority>
     </url>
 
+    <url>
+        <loc>https://www.trimitha.co.in/founder/index.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
 </urlset>
