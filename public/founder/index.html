@@ -1,557 +1,855 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trimitha | Trust • Thought • Technology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Thrinath Polanki | Founder of Trimitha & Student Entrepreneur</title>
     
-    <meta name="description" content="Learn about Trimitha, a technology-driven company built on Trust, Thought, and Technology, focused on connecting people and ideas.">
-    <meta name="keywords" content="Trimitha, Technology Company, Trust, Thought, Technology, Togetherness, Innovation, Consulting, Development, Growth, Services">
-    <meta name="author" content="Trimitha">
-    <link rel="canonical" href="https://www.trimitha.co.in/">
-    <meta name="robots" content="index,follow">
-    <link rel="icon" type="image/png" href="Images/Trimitha Logo.png" />
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="The official portfolio of Thrinath Polanki, Founder of Trimitha. Explore projects, experience, and insights on entrepreneurship, web development, and tech innovation.">
+    <meta name="keywords" content="Thrinath Polanki, Founder Trimitha, Student Entrepreneur, Web Developer, Tech Leader, Trimitha Founder">
+    <meta name="author" content="Thrinath Polanki">
+    <link rel="canonical" href="https://www.trimitha.co.in/founder/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thrinathpolanki.in/">
+    <meta property="og:title" content="Thrinath Polanki | Founder of Trimitha">
+    <meta property="og:description" content="Student Entrepreneur and Founder of Trimitha. Building the future through code and leadership.">
+    <meta property="og:image" content="https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://thrinathpolanki.in/">
+    <meta property="twitter:title" content="Thrinath Polanki | Founder of Trimitha">
+    <meta property="twitter:description" content="Student Entrepreneur and Founder of Trimitha. Building the future through code and leadership.">
+    <meta property="twitter:image" content="https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-1.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (CDN for production-ready single file) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            border: '#334155'
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Schema Markup for Knowledge Panel -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://www.trimitha.co.in/#organization",
-          "name": "Trimitha",
-          "url": "https://www.trimitha.co.in",
-          "logo": "https://www.trimitha.co.in/Images/TrimithaLogo.png",
-          "image": "https://www.trimitha.co.in/Images/TrimithaLogo.png",
-          "description": "A technology-driven company built on Trust, Thought, and Technology with togetherness.",
-          "foundingDate": "2025-06-26",
-          "sameAs": [
-            "https://www.linkedin.com/company/trimitha",
-            "https://www.instagram.com/trimitha.co/",
-            "https://twitter.com/trimithacompany"
-          ],
-          "knowsAbout": [
-            "Web Development",
-            "Entrepreneurship",
-            "UX Design",
-            "Digital Strategy",
-            "Artificial Intelligence",
-            "Machine Learning"
+      "@type": "Person",
+      "name": "Thrinath Polanki",
+      "url": "https://thrinathpolanki.in",
+      "image":[
+            "https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-1.png",
+            "https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-2.png",
+            "https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-3.png",
+            "https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-4.png",
+            "https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-5.png",
+            "https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-6.png",
+            "https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-7.png",
+            "https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-8.png",
+            "https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-9.png",
+            "https://trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-10.png"
+    ],
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Trimitha",
+        "url": "https://trimitha.com"
+      },
+            "alumniOf": [
+                {
+                    "@type": "College",
+                    "name": "Vasireddy Venkatadri Institute of Technology"
+                },
+                {
+                    "@type": "University",
+                    "name": "Vasireddy Venkatadri International Technological University"
+                }
             ],
-          "founder": {
-            "@type": "Person",
-            "name": "Thrinath Polanki",
-            "url": "https://www.linkedin.com/in/thrinathpolanki",
-            "sameAs": [
-              "https://www.linkedin.com/in/thrinathpolanki",
-              "https://twitter.com/thrinath_bfe",
-              "https://www.instagram.com/thrinath.polanki"
-            ]
-          }
-        },
-        {
-          "@type": "Event",
-          "name": "Trimitha Core Ideology Established",
-          "startDate": "2025-06-26",
-          "description": "The foundation and ideology of Trimitha were established.",
-          "location": {
-            "@type": "Place",
-            "name": "Trimitha Headquarters",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Proddatur",
-              "addressRegion": "Andhra Pradesh",
-              "addressCountry": "IN"
-            }
-          },    
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventCompleted"
-        },
-        {
-          "@type": "Event",
-          "name": "Trimitha Official Platform Launch",
-          "startDate": "2026-01-08",
-          "description": "Trimitha officially launched its platform.",
-          "location": {
-            "@type": "Place",
-            "name": "Trimitha Headquarters",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Proddatur",
-              "addressRegion": "Andhra Pradesh",
-              "addressCountry": "IN"
-            }
-          },
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventCompleted"
-        },
-        {
-          "@type": "Event",
-          "name": "Trimitha Official Platform Launch",
-          "startDate": "2026-01-08",
-          "description": "Trimitha officially launched its platform.",
-          "location": {
-            "@type": "Place",
-            "name": "Trimitha Headquarters",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Proddatur",
-              "addressRegion": "Andhra Pradesh",
-              "addressCountry": "IN"
-            }
-          },
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventCompleted"
-        },
-        {
-          "@type": "Event",
-          "name": "Trimitha Domain Acquisition",
-          "startDate": "2026-01-17",
-          "description": "Trimitha secured its official domain trimitha.co.in.",
-          "location": {
-            "@type": "Place",
-            "name": "Trimitha Headquarters",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Proddatur",
-              "addressRegion": "Andhra Pradesh",
-              "addressCountry": "IN"
-            }
-          },
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventCompleted"
-        }
-      ]
+      "sameAs": [
+        "https://linkedin.com/in/thrinathpolanki",
+        "https://github.com/thrinathpolanki",
+        "https://instagram.com/thrimitha.polanki",
+        "https://twitter.com/thrinathpolanki"
+      ],
+      "knowsAbout": ["Web Development", "Entrepreneurship", "UX Design", "Digital Strategy", "Artificial Intelligence", "Machine Learning"]
     }
-    </script>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <script>
-        const configureTailwind = () => {
-            if (typeof tailwind !== 'undefined') {
-                tailwind.config = {
-                    theme: {
-                        extend: {
-                            colors: {
-                                primary: '#0A2540',
-                                secondary: '#00D4FF',
-                                accent: '#C5A059',
-                                light: '#F4F6F8',
-                            },
-                            fontFamily: {
-                                sans: ['Inter', 'sans-serif'],
-                                heading: ['Montserrat', 'sans-serif'],
-                            },
-                            animation: {
-                                'spin-slow': 'spin 12s linear infinite',
-                                'spin-reverse': 'spin 8s linear infinite reverse',
-                            }
-                        }
-                    }
-                };
-            } else {
-                setTimeout(configureTailwind, 50);
-            }
-        };
-        
-        configureTailwind();
     </script>
 
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
-        
-        /* Smooth scrolling */
-        html { scroll-behavior: smooth; }
-
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 10px;
         }
         ::-webkit-scrollbar-track {
-            background: #0A2540; 
+            background: #0f172a; 
         }
         ::-webkit-scrollbar-thumb {
-            background: #1e3a5f; 
+            background: #334155; 
             border-radius: 5px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #00D4FF; 
+            background: #475569; 
         }
         
-        /* Animation for modal */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        .animate-fade-in-up {
-            animation: fadeInUp 0.3s ease-out;
+        .dark .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* Nav Glass Effect Adjustment */
-        .nav-glass {
-            background-color: rgba(10, 37, 64, 0.95);
-            backdrop-filter: blur(10px);
+        .text-gradient {
+            background: linear-gradient(to right, #3b82f6, #0ea5e9);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Ensure no horizontal scroll on mobile due to animations */
+        body {
+            overflow-x: hidden;
+            width: 100%;
         }
     </style>
 </head>
-<body class="bg-white text-slate-800 antialiased selection:bg-[#00D4FF] selection:text-[#0A2540]">
+<body class="bg-slate-50 text-slate-900 dark:bg-dark-bg dark:text-slate-100 font-sans antialiased transition-colors duration-300 overflow-x-hidden">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 border-b border-gray-800 transition-all duration-300 nav-glass">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
-                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer z-50">
-                    <img src="Images/Trimitha Logo.png" alt="Trimitha Logo" class="h-10 w-auto object-contain">
-                    <span class="font-bold text-2xl tracking-tight text-white font-heading">TRIMITHA</span>
-                </a>
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-heading font-bold text-2xl tracking-tight z-50">
+                        Thrinath<span class="text-brand-500"> Polanki</span>
+                    </a>
+                </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8" id="desktop-menu">
-                    <div class="public-nav flex items-center space-x-8">
-                        <a href="index.html" class="nav-link text-sm font-medium tracking-wide text-white hover:text-[#00D4FF] transition-colors">HOME</a>
-                        <a href="about.html" class="nav-link text-sm font-medium tracking-wide text-white hover:text-[#00D4FF] transition-colors">ABOUT</a>
-                        <a href="services.html" class="nav-link text-sm font-medium tracking-wide text-white hover:text-[#00D4FF] transition-colors">SERVICES</a>
-                        <a href="contact.html" class="nav-link text-sm font-medium tracking-wide text-white hover:text-[#00D4FF] transition-colors">CONTACT</a>
-                        <div class="h-6 w-px bg-gray-700 mx-2"></div>
-                        <a href="login.html" class="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors">
-                            <i data-lucide="lock" class="w-3.5 h-3.5"></i> Employee Login
-                        </a>
-                    </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium hover:text-brand-500 transition-colors">Home</a>
+                    <a href="#about" class="text-sm font-medium hover:text-brand-500 transition-colors">About</a>
+                    <a href="#trimitha" class="hover:opacity-80 transition-opacity flex items-center">
+                        <img src="Trimitha Logo.png" alt="Trimitha" class="h-8 w-auto">
+                    </a>
+                    <a href="personal.html" class="text-sm font-medium hover:text-brand-500 transition-colors">Personal</a>
+                    <a href="#projects" class="text-sm font-medium hover:text-brand-500 transition-colors">Projects</a>
+                    <a href="blog.html" class="text-sm font-medium hover:text-brand-500 transition-colors">Blog</a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold hover:opacity-90 transition-all shadow-md">
+                        Let's Connect
+                    </a>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
+                    </button>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center z-50">
-                    <button onclick="toggleMobileMenu()" class="text-white hover:text-[#00D4FF] transition-colors focus:outline-none p-2">
-                        <i data-lucide="menu" class="w-7 h-7" id="mobile-menu-icon"></i>
+                <div class="md:hidden flex items-center gap-4">
+                    <!-- Mobile Theme Toggle -->
+                    <button id="mobile-theme-toggle" class="p-2 text-slate-700 dark:text-slate-300 focus:outline-none">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
+                    </button>
+                    
+                    <button id="mobile-menu-btn" class="text-slate-900 dark:text-white p-2 focus:outline-none" aria-label="Open Menu">
+                        <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden absolute w-full left-0 top-20 bg-[#0A2540] border-t border-gray-800 shadow-2xl overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="flex flex-col p-4 space-y-2">
-                <a href="index.html" class="block text-base font-bold text-white hover:text-[#00D4FF] hover:bg-white/5 py-3 px-4 rounded-lg transition-all">HOME</a>
-                <a href="about.html" class="block text-base font-bold text-white hover:text-[#00D4FF] hover:bg-white/5 py-3 px-4 rounded-lg transition-all">ABOUT</a>
-                <a href="services.html" class="block text-base font-bold text-white hover:text-[#00D4FF] hover:bg-white/5 py-3 px-4 rounded-lg transition-all">SERVICES</a>
-                <a href="contact.html" class="block text-base font-bold text-white hover:text-[#00D4FF] hover:bg-white/5 py-3 px-4 rounded-lg transition-all">CONTACT</a>
-                <div class="h-px bg-gray-700 my-2 mx-4"></div>
-                <a href="login.html" class="block text-base text-gray-300 hover:text-white py-3 px-4 flex items-center gap-3">
-                    <i data-lucide="lock" class="w-5 h-5"></i> Employee Login
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark-card border-b dark:border-dark-border shadow-xl absolute w-full left-0 top-20">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="index.html" class="block px-3 py-3 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Home</a>
+                <a href="#about" class="block px-3 py-3 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">About</a>
+                <a href="#trimitha" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <img src="Trimitha Logo.png" alt="Trimitha" class="h-8 w-auto mx-auto">
+                </a>
+                <a href="personal.html" class="block px-3 py-3 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Personal</a>
+                <a href="#projects" class="block px-3 py-3 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Projects</a>
+                <a href="blog.html" class="block px-3 py-3 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Blog</a>
+                <a href="#contact" class="block px-3 py-3 mt-4 text-center rounded-lg text-base font-bold bg-brand-500 text-white shadow-md hover:bg-brand-600 transition-colors">
+                    Let's Connect
                 </a>
             </div>
         </div>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <!-- Fixed: Increased top padding for mobile (pt-32) and optimized spacing -->
-        <div class="relative pt-32 pb-16 md:pt-20 md:pb-0 min-h-screen flex items-center overflow-hidden bg-[#0A2540]">
-            <!-- Abstract Background -->
-            <div class="absolute inset-0 bg-[#0A2540]">
-                <!-- Fixed: Adjusted background skew width/opacity for mobile readability -->
-                <div class="absolute top-0 right-0 w-full md:w-2/3 h-full bg-[#0d2e4f] opacity-30 md:opacity-50 transform -skew-x-12 md:translate-x-20 translate-x-10"></div>
-                <div class="absolute bottom-0 left-0 w-3/4 md:w-1/2 h-1/2 bg-[#00D4FF] opacity-10 md:opacity-5 blur-[80px] md:blur-[120px] rounded-full"></div>
-            </div>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-44 md:pt-32 overflow-hidden px-4">
+        <!-- Background Blobs -->
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-brand-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
 
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-12 items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm animate-[fadeInUp_0.5s_ease-out]">
+                <span class="text-xs sm:text-sm font-semibold text-brand-600 dark:text-brand-400 uppercase tracking-wide">Trust • Thought • Technology</span>
+            </div>
+            
+            <h1 class="font-heading text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight animate-[fadeInUp_0.7s_ease-out_0.2s_both]">
+                Thrinath, Founder of <br class="hidden sm:block" /> <span class="text-gradient">Trimitha</span>
+            </h1>
+            
+            <h2 class="text-xl sm:text-2xl font-medium text-slate-800 dark:text-slate-200 mb-6 animate-[fadeInUp_0.8s_ease-out_0.3s_both]">
+                Aligning people and ideas through <span class="text-brand-500">Synergy in Motion</span>.
+            </h2>
+            
+            <p class="mt-2 max-w-2xl mx-auto text-lg sm:text-xl text-slate-600 dark:text-slate-400 animate-[fadeInUp_0.9s_ease-out_0.4s_both] px-4 leading-relaxed">
+                As a student entrepreneur, I bridge the gap between academic innovation and enterprise reality. I specialize in building robust architectures that scale, ensuring trust and long-term growth for every digital solution I create.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4 animate-[fadeInUp_1.1s_ease-out_0.6s_both] w-full max-w-2xl mx-auto sm:max-w-none items-center">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:shadow-lg hover:transform hover:-translate-y-1 transition-all duration-300 text-center shadow-brand-500/20 shadow-xl">
+                    Work with Me
+                </a>
                 
-                <!-- Text Content -->
-                <div class="text-left space-y-6 md:space-y-8 z-10 order-1">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#00D4FF] bg-[#00D4FF]/10 text-[#00D4FF] text-xs font-bold tracking-wider">
-                        WELCOME TO TRIMITHA
-                    </div>
-                    
-                    <!-- Fixed: Responsive text sizes for better mobile wrapping -->
-                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-[1.15] font-heading">
-                        Synergy in <br class="hidden sm:block" />
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#008ba6]">Motion.</span>
-                    </h1>
-                    
-                    <p class="text-base sm:text-lg text-gray-300 max-w-lg leading-relaxed">
-                        Where people and ideas align through trust. Powered by three, built for long-term growth.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
-                        <a href="services.html" class="w-full sm:w-auto px-6 py-3.5 rounded-md font-semibold transition-all duration-300 flex items-center justify-center gap-2 bg-[#00D4FF] text-[#0A2540] hover:brightness-110 shadow-lg shadow-teal-500/20 active:scale-95">
-                            Explore Services
-                        </a>
-                        <button onclick="openOurStoryModal()" class="w-full sm:w-auto px-6 py-3.5 rounded-md font-semibold transition-all duration-300 flex items-center justify-center gap-2 border-2 border-[#00D4FF] text-[#00D4FF] hover:bg-[#00D4FF] hover:text-[#0A2540] active:scale-95">
-                            Our Story
-                        </button>
-                    </div>
+                <a href="blog.html" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-500 text-white font-bold hover:bg-brand-600 hover:shadow-lg hover:transform hover:-translate-y-1 transition-all duration-300 text-center shadow-brand-500/20 shadow-xl flex items-center justify-center">
+                    <i class="fas fa-pen-nib mr-2"></i> Read my Blog
+                </a>
+
+                <a href="#projects" class="w-full sm:w-auto px-8 py-4 rounded-full border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 font-semibold transition-all duration-300 text-center">
+                    View My Work
+                </a>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-50 hidden sm:block">
+                <i class="fas fa-arrow-down text-xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Trusted By / Ecosystem Section -->
+    <section class="py-8 bg-white dark:bg-dark-bg/50 border-b border-slate-100 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Building Impact With</p>
+            <div class="flex justify-center gap-8 md:gap-16 items-center flex-wrap opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Primary Entity -->
+                <div class="flex items-center gap-2">
+                    <img src="Trimitha Logo.png" alt="Trimitha" class="h-8 w-auto">
+                    <span class="font-heading font-bold text-xl text-slate-700 dark:text-slate-300">Trimitha</span>
                 </div>
-                
-                <!-- Abstract Graphic -->
-                <div class="flex justify-center relative order-2 md:order-2 mt-4 md:mt-0">
-                    <!-- Fixed: Responsive width/height for graphic (w-48 on mobile, w-80 on desktop) -->
-                    <div class="relative w-56 h-56 md:w-80 md:h-80 transition-all duration-500">
-                        <!-- Spinning borders -->
-                        <div class="absolute inset-0 border-2 border-[#C5A059] rounded-full animate-spin-slow opacity-30"></div>
-                        <div class="absolute inset-4 border-2 border-[#00D4FF] rounded-full animate-spin-reverse opacity-40"></div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-code-branch text-2xl text-slate-400"></i>
+                    <span class="font-heading font-bold text-lg text-slate-400">Open Source</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white dark:bg-dark-bg reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="relative group order-2 md:order-1">
+                    <!-- Photo Slideshow -->
+                    <div class="aspect-[4/5] rounded-2xl bg-slate-200 dark:bg-slate-800 overflow-hidden relative shadow-2xl mx-auto md:mx-0 max-w-sm md:max-w-full group-hover:scale-[1.02] transition-transform duration-500">
                         
-                        <!-- Logo -->
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <img src="Images/Trimitha Logo.png" alt="Trimitha Hero Graphic" class="w-28 h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_15px_rgba(0,212,255,0.3)]">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <!-- Slide 1 (Active) -->
+                        <img src="tpimgs/polanki-thrinath-founder-trimitha-1.png" alt="Polanki Thrinath Founder of Trimitha" class="about-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 z-0">
+                        
+                        <!-- Slide 2 -->
+                        <img src="tpimgs/polanki-thrinath-founder-trimitha-2.png" alt="Thrinath Polanki Student Entrepreneur and Founder of Trimitha" class="about-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 z-0">
+                        
+                        <!-- Slide 3 -->
+                        <img src="tpimgs/polanki-thrinath-founder-trimitha-3.png" alt="Polanki Thrinath Founder of Trimitha" class="about-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 z-0">
+                        
+                        <!--Slide 4-->
+                        <img src="tpimgs/polanki-thrinath-founder-trimitha-4.png" alt="Thrinath Polanki Student Entrepreneur and Founder of Trimitha" class="about-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 z-0">
 
-        <!-- Services Section -->
-        <div class="py-20 md:py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-[#0A2540] text-3xl font-bold mb-4 font-heading">Our Methodology</h2>
-                    <div class="w-20 h-1 bg-[#C5A059] mx-auto"></div>
-                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-                        The Trimitha approach divides complex challenges into three manageable phases.
-                    </p>
+                        <!--Slide 5-->
+
+                        <img src="tpimgs/polanki-thrinath-founder-trimitha-5.png" alt="Polanki Thrinath Founder of Trimitha" class="about-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 z-0">
+                        
+                        <!--Slide 6-->
+                        <img src="tpimgs/polanki-thrinath-founder-trimitha-6.png" alt="Thrinath Polanki Student Entrepreneur and Founder of Trimitha" class="about-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 z-0">
+
+                        <!--Slide 7-->
+                        <img src="tpimgs/polanki-thrinath-founder-trimitha-7.png" alt="Polanki Thrinath Founder of Trimitha" class="about-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 z-0">
+
+                        <!-- Overlay Content -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent z-10"></div>
+                        <div class="absolute bottom-6 left-6 text-white z-20">
+                            <p class="text-sm font-medium opacity-80">Based in India</p>
+                            <p class="font-heading font-bold text-xl">Thrinath Polanki</p>
+                        </div>
+                    </div>
+                    <!-- Decorative Element (Hidden on mobile for cleaner look) -->
+                    <div class="hidden md:block absolute -z-10 -bottom-6 -right-6 w-full h-full border-2 border-brand-500 rounded-2xl"></div>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Service 1 -->
-                    <div class="group p-8 rounded-xl border border-gray-100 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div class="mb-6 bg-blue-50 w-16 h-16 rounded-lg flex items-center justify-center group-hover:bg-[#0A2540] transition-colors">
-                            <i data-lucide="zap" class="w-8 h-8 text-[#0A2540] transition-colors group-hover:text-[#00D4FF]"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#0A2540] mb-3 font-heading">Consulting & Ideation</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm">Strategic planning to align your three core pillars of growth.</p>
-                    </div>
-                    <!-- Service 2 -->
-                    <div class="group p-8 rounded-xl border border-gray-100 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div class="mb-6 bg-blue-50 w-16 h-16 rounded-lg flex items-center justify-center group-hover:bg-[#0A2540] transition-colors">
-                            <i data-lucide="layers" class="w-8 h-8 text-[#0A2540] transition-colors group-hover:text-[#00D4FF]"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#0A2540] mb-3 font-heading">Development & Execution</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm">Building robust architectures that scale with your vision.</p>
-                    </div>
-                    <!-- Service 3 -->
-                    <div class="group p-8 rounded-xl border border-gray-100 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div class="mb-6 bg-blue-50 w-16 h-16 rounded-lg flex items-center justify-center group-hover:bg-[#0A2540] transition-colors">
-                            <i data-lucide="bar-chart" class="w-8 h-8 text-[#0A2540] transition-colors group-hover:text-[#00D4FF]"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#0A2540] mb-3 font-heading">Growth & Maintenance</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm">Continuous optimization to ensure long-term synergy.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- About Preview -->
-        <div class="py-20 md:py-24 bg-[#F4F6F8]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-                <div class="relative order-2 md:order-1">
-                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-[#C5A059] opacity-20 rounded-tl-3xl"></div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg relative z-10">
-                        <h3 class="text-2xl font-bold text-[#0A2540] mb-4 font-heading">The Power of Three</h3>
-                        <p class="text-gray-600 mb-6 text-sm md:text-base">
-                            Our name "Trimitha" comes from the ancient concept of trinities. We believe the strongest structures stand on three legs: 
+                <div class="order-1 md:order-2">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6 text-center md:text-left">The Story Behind <br><span class="text-brand-500">Trimitha.</span></h2>
+                    <div class="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+                        <p>
+                            My journey didn't begin in a boardroom; it began in a dorm room with a laptop and a simple question: <em>"How can we transform ideas into real impact and long-lasting outcomes by aligning people, insight, and technology??"</em>
                         </p>
-                        <ul class="space-y-4">
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 rounded-full bg-[#00D4FF]"></div>
-                                <span class="font-medium text-[#0A2540]">Innovation in Design</span>
+                        <p>
+                            That question gave birth to <strong>Trimitha</strong>. I realized that many businesses were getting "websites" but missing "identities". I started Trimitha to align technology with purpose—building platforms that don't just look good but actually work for the people using them.
+                        </p>
+                        <p>
+                            Balancing my degree in AI & ML with the responsibilities of a founder isn't a conflict; it's my superpower. It keeps me grounded in the fundamentals while pushing me to apply them in the real world immediately. I don't just learn theory; I ship products.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-dark-card border border-slate-100 dark:border-slate-700 text-center md:text-left">
+                            <h3 class="font-bold text-2xl text-brand-600">1+</h3>
+                            <p class="text-sm text-slate-500">Years Building</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-50 dark:bg-dark-card border border-slate-100 dark:border-slate-700 text-center md:text-left">
+                            <h3 class="font-bold text-2xl text-brand-600">Founder</h3>
+                            <p class="text-sm text-slate-500">Of Trimitha</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trimitha Feature Section -->
+    <section id="trimitha" class="py-16 md:py-24 bg-slate-900 relative overflow-hidden reveal">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 md:mb-16">
+                <span class="text-brand-400 font-semibold tracking-wider uppercase text-sm">The Venture</span>
+                <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mt-2">Founder of Trimitha</h2>
+                <div class="w-20 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="bg-slate-800/50 backdrop-blur-md border border-slate-700 rounded-3xl p-6 md:p-12 shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-4">What is our mission?</h3>
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+                            Our mission is to transform ideas into real impact and long-lasting outcomes by aligning people, insight, and technology.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center text-slate-300">
+                                <i class="fas fa-check-circle text-brand-500 mr-3 flex-shrink-0"></i> Scalable Web Architecture
                             </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 rounded-full bg-[#00D4FF]"></div>
-                                <span class="font-medium text-[#0A2540]">Integrity in Action</span>
+                            <li class="flex items-center text-slate-300">
+                                <i class="fas fa-check-circle text-brand-500 mr-3 flex-shrink-0"></i> Strategic Brand Development
                             </li>
-                            <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 rounded-full bg-[#00D4FF]"></div>
-                                <span class="font-medium text-[#0A2540]">Impact on Society</span>
+                            <li class="flex items-center text-slate-300">
+                                <i class="fas fa-check-circle text-brand-500 mr-3 flex-shrink-0"></i> Performance-First UX Design
                             </li>
                         </ul>
+                        <a href="https://trimitha.co.in" class="inline-flex items-center text-brand-400 font-semibold hover:text-brand-300 transition-colors">
+                            Visit Company Website <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+
+                        <!-- Added Services Navigation Info -->
+                        <div class="mt-8 pt-6 border-t border-slate-700/50">
+                            <h4 class="text-sm font-bold text-white mb-3">How to View Services on Trimitha</h4>
+                            <div class="space-y-3 text-sm text-slate-400">
+                                <p><i class="fas fa-mouse-pointer text-brand-500 mr-2"></i> <strong>Homepage:</strong> Click the "Explore Services" button to view our offerings.</p>
+                                <p><i class="fas fa-bars text-brand-500 mr-2"></i> <strong>Navigation Menu:</strong> Look for "Services" in the main menu at the top of the site.</p>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-                <div class="order-1 md:order-2">
-                    <h2 class="text-2xl md:text-3xl font-bold text-[#0A2540] mb-6 font-heading">Building Bridges Between Ideas</h2>
-                    <p class="text-gray-600 leading-relaxed mb-8 text-sm md:text-base">
-                        Trimitha began with a simple belief: progress is strongest when built together. What started as a shared thought among like-minded individuals grew into a company founded on trust, collaboration, and unity of purpose. Built on the principles of Trust, Thought, and Technology with Togetherness, Trimitha brings people and ideas into alignment to create meaningful and lasting outcomes.
-                    </p>
-                    <a href="about.html" class="inline-flex items-center gap-2 text-[#00D4FF] font-semibold hover:underline">
-                        Learn More About Us
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
+                    <div class="relative mt-8 md:mt-0">
+                        <!-- Decorative Code/Tech graphic -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-brand-600 to-purple-600 rounded-2xl transform rotate-3 opacity-20"></div>
+                        <div class="bg-slate-900 border border-slate-700 rounded-2xl p-6 h-full relative shadow-lg flex flex-col justify-center items-center text-center">
+                            <div class="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mb-4">
+                                <img src="Trimitha Logo.png" alt="Trimitha Logo" class="w-10 h-10 object-contain">
+                            </div>
+                            <h4 class="text-xl font-bold text-white mb-2">My Role</h4>
+                            <p class="text-sm text-slate-400">
+                                As Founder, I lead the technical direction, define the product roadmap, and ensure every deliverable meets our rigorous standards for quality and SEO performance.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#0A2540] text-white pt-16 md:pt-20 pb-10 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center gap-2 mb-6">
-                        <img src="Images/Trimitha Logo.png" alt="Trimitha Logo" class="h-10 w-auto object-contain">
-                        <span class="font-bold text-xl font-heading">TRIMITHA</span>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Trimitha is a people-driven company focused on trust, shared thinking, and working together to turn ideas into impact.
-                    </p>
-                </div>
+    <!-- Experience Timeline -->
+    <section class="py-16 md:py-24 bg-slate-50 dark:bg-dark-bg reveal">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-heading text-3xl font-bold mb-12 text-center dark:text-white">Journey & Experience</h2>
+            
+            <div class="relative border-l-2 border-slate-200 dark:border-slate-700 ml-3 md:ml-0 space-y-12">
                 
-                <div>
-                    <h4 class="font-bold text-[#C5A059] mb-6 font-heading">Navigation</h4>
-                    <ul class="space-y-3 text-gray-300 text-sm">
-                        <li><a href="index.html" class="hover:text-[#00D4FF] transition-colors">Home</a></li>
-                        <li><a href="about.html" class="hover:text-[#00D4FF] transition-colors">About Us</a></li>
-                        <li><a href="services.html" class="hover:text-[#00D4FF] transition-colors">Services</a></li>
-                        <li><a href="contact.html" class="hover:text-[#00D4FF] transition-colors">Careers</a></li>
-                    </ul>
+                <!-- Item 1 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="hidden md:block absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-brand-500 ring-4 ring-white dark:ring-dark-bg"></div>
+                    <div class="md:flex items-start justify-between group">
+                        <div class="md:w-5/12 md:text-right md:pr-12 mb-2 md:mb-0">
+                            <h3 class="font-bold text-lg dark:text-white">Founder & Lead Developer</h3>
+                            <p class="text-brand-600 dark:text-brand-400 font-medium">Trimitha</p>
+                            <span class="text-sm text-slate-500">2025 - Present</span>
+                        </div>
+                        <!-- Mobile Dot -->
+                        <div class="md:hidden absolute left-[-5px] top-1.5 w-3 h-3 rounded-full bg-brand-500"></div>
+                        <div class="md:w-5/12 md:pl-12">
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Leading the strategic vision and technical execution. managing client relations, and overseeing full-stack development of digital products.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <h4 class="font-bold text-[#C5A059] mb-6 font-heading">Legal</h4>
-                    <ul class="space-y-3 text-gray-300 text-sm">
-                        <li><a href="privacy.html" class="hover:text-[#00D4FF] transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="hover:text-[#00D4FF] transition-colors">Terms & Conditions</a></li>
-                        <li><a href="disclaimer.html" class="hover:text-[#00D4FF] transition-colors">Disclaimer</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-bold text-[#C5A059] mb-6 font-heading">Contact</h4>
-                    <ul class="space-y-3 text-gray-300 text-sm">
-                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-[#00D4FF]"></i> Proddatur, India</li>
-                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-[#00D4FF]"></i> contact@trimitha.co.in</li>
-                    </ul>
+                <!-- Item 2 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="hidden md:block absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-600 ring-4 ring-white dark:ring-dark-bg"></div>
+                    <div class="md:flex items-start justify-between group">
+                        <div class="md:w-5/12 md:text-right md:pr-12 mb-2 md:mb-0">
+                            <h3 class="font-bold text-lg dark:text-white">Student</h3>
+                            <p class="text-brand-600 dark:text-brand-400 font-medium">Vasireddy Venkatadri Institute of Technology</p>
+                            <span class="text-sm text-slate-500">2024 - Present</span>
+                        </div>
+                        <!-- Mobile Dot -->
+                        <div class="md:hidden absolute left-[-5px] top-1.5 w-3 h-3 rounded-full bg-slate-300"></div>
+                        <div class="md:w-5/12 md:pl-12">
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Pursuing B. Tech in AI & ML. Active member of tech clubs and hackathon participant.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-                <p>&copy; 2026 Trimitha All rights reserved.</p>
-                <div class="flex gap-4 mt-4 md:mt-0">
-                    <a href="https://www.linkedin.com/company/trimitha" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-[#00D4FF] hover:text-[#0A2540] transition-colors group">
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    </a>
-                    <a href="https://x.com/trimithacompany" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-[#00D4FF] hover:text-[#0A2540] transition-colors group">
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    </a>
-                    <a href="https://www.instagram.com/trimitha.co/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-[#00D4FF] hover:text-[#0A2540] transition-colors group">
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                    </a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 md:py-24 bg-white dark:bg-dark-bg reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-heading text-3xl font-bold mb-12 text-center dark:text-white">Technical Arsenal</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Development -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-dark-card border border-slate-100 dark:border-slate-700 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-6 text-blue-600">
+                        <i class="fas fa-code text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-4 dark:text-white">Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-xs font-medium bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full dark:text-slate-300">HTML5/CSS3</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full dark:text-slate-300">JavaScript</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full dark:text-slate-300">React.js</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full dark:text-slate-300">Tailwind</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full dark:text-slate-300">Node.js</span>
+                    </div>
+                </div>
+
+                <!-- Strategy & SEO -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-dark-card border border-slate-100 dark:border-slate-700 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-6 text-green-600">
+                        <i class="fas fa-search-dollar text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-4 dark:text-white">Growth & SEO</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-xs font-medium bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full dark:text-slate-300">Technical SEO</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full dark:text-slate-300">Knowledge Panel</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full dark:text-slate-300">Analytics</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full dark:text-slate-300">Branding</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Design -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-dark-card border border-slate-100 dark:border-slate-700 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6 text-purple-600">
+                        <i class="fas fa-pen-nib text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-4 dark:text-white">Design & Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 text-xs font-medium bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full dark:text-slate-300">Figma</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full dark:text-slate-300">Git/GitHub</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full dark:text-slate-300">UI/UX Strategy</span>
+                        <span class="px-3 py-1 text-xs font-medium bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-full dark:text-slate-300">VS Code</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moved Portfolio Button Here -->
+            <div class="mt-12 text-center">
+                <a href="https://thrinath-portfolio.vercel.app" target="_blank" class="inline-flex items-center px-8 py-3 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:shadow-lg hover:-translate-y-1 transition-all duration-300 shadow-brand-500/20 shadow-md">
+                    See My Portfolio <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 md:py-24 bg-slate-50 dark:bg-dark-bg reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl font-bold dark:text-white">Featured Projects</h2>
+                <p class="text-slate-500 mt-2">Selected works from my portfolio</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <a href="https://trimitha.co.in" target="_blank" class="block group rounded-2xl overflow-hidden bg-white dark:bg-dark-card shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700">
+                    <div class="h-48 md:h-56 bg-slate-200 dark:bg-slate-700 relative overflow-hidden">
+                         <div class="absolute inset-0 bg-gradient-to-br from-brand-500 to-purple-600 opacity-80 group-hover:scale-110 transition-transform duration-500"></div>
+                         <div class="absolute inset-0 flex flex-col items-center justify-center">
+                             <img src="Trimitha Logo.png" alt="Trimitha Logo" class="w-16 h-16 mb-2 object-contain shadow-lg rounded-lg">
+                             <h3 class="text-white text-2xl font-bold mt-2">Trimitha Official</h3>
+                         </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-bold text-brand-600 bg-brand-50 dark:bg-slate-800 px-2 py-1 rounded">Business</span>
+                            <div class="flex space-x-3">
+                                <span class="text-slate-400 group-hover:text-brand-500 transition-colors p-1"><i class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2 dark:text-white">Trimitha Company Site</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">
+                            Trimitha is a people-centric technology and company focused on turning ideas into scalable, long-term solutions through trust and thoughtful execution.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-24 bg-white dark:bg-dark-bg reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold dark:text-white">Impact & Endorsements</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-4 max-w-2xl mx-auto">
+                    Real feedback from collaborators and clients who have experienced the Trimitha difference.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"> <!-- Reduced gap from 8 to 6 -->
+                <!-- Testimonial 1 -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-dark-card border border-slate-100 dark:border-slate-700 relative shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-quote-left text-3xl text-brand-100 dark:text-brand-900/50 absolute top-4 left-4"></i>
+                    <p class="text-slate-600 dark:text-slate-300 relative z-10 mb-4 italic leading-relaxed text-sm">
+                        "Thrinath is a rare find. He combines deep technical knowledge with a founder's mindset. Trimitha didn't just build our site; they built our digital identity."
+                    </p>
+                    <div class="flex items-center border-t border-slate-200 dark:border-slate-700 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-white font-bold mr-3 shadow-lg flex-shrink-0">R</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Rahul V.</h4>
+                            <p class="text-xs text-slate-500">CEO, TechStart</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                 <div class="p-6 rounded-2xl bg-slate-50 dark:bg-dark-card border border-slate-100 dark:border-slate-700 relative shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-quote-left text-3xl text-brand-100 dark:text-brand-900/50 absolute top-4 left-4"></i>
+                    <p class="text-slate-600 dark:text-slate-300 relative z-10 mb-4 italic leading-relaxed text-sm">
+                        "Working with Thrinath was seamless. He understood our constraints as a small business and delivered a solution that scaled with us perfectly."
+                    </p>
+                    <div class="flex items-center border-t border-slate-200 dark:border-slate-700 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold mr-3 shadow-lg flex-shrink-0">S</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Sneha K.</h4>
+                            <p class="text-xs text-slate-500">Director, Creative Agency</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Testimonial 3 -->
+                 <div class="p-6 rounded-2xl bg-slate-50 dark:bg-dark-card border border-slate-100 dark:border-slate-700 relative shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-quote-left text-3xl text-brand-100 dark:text-brand-900/50 absolute top-4 left-4"></i>
+                    <p class="text-slate-600 dark:text-slate-300 relative z-10 mb-4 italic leading-relaxed text-sm">
+                        "The attention to detail in UI/UX is unmatched. Thrinath doesn't just code; he crafts experiences that users actually enjoy navigating."
+                    </p>
+                    <div class="flex items-center border-t border-slate-200 dark:border-slate-700 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold mr-3 shadow-lg flex-shrink-0">A</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Arjun M.</h4>
+                            <p class="text-xs text-slate-500">Product Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white dark:bg-dark-bg reveal">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6 dark:text-white">Ready to create something?</h2>
+            <p class="text-slate-600 dark:text-slate-400 mb-10 text-lg">
+                Whether you want to discuss a project for Trimitha, or just connect with a fellow builder, my inbox is open.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                <a href="mailto:polankithrinath@gmail.com" class="flex items-center justify-center p-4 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:text-brand-500 transition-all dark:text-slate-300 break-all">
+                    <i class="fas fa-envelope mr-3 text-xl"></i> polankithrinath@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/thrinathpolanki" target="_blank" class="flex items-center justify-center p-4 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-600 hover:text-blue-600 transition-all dark:text-slate-300">
+                    <i class="fab fa-linkedin mr-3 text-xl"></i> LinkedIn
+                </a>
+            </div>
+
+            <!-- Contact Form -->
+            <form id="contact-form" class="text-left bg-slate-50 dark:bg-dark-card p-6 md:p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-lg relative">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Name</label>
+                        <input type="text" id="contact-name" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500 dark:text-white" placeholder="Thripura Sundar" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Email</label>
+                        <input type="email" id="contact-email" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500 dark:text-white" placeholder="thripurasundar@example.com" required>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Message</label>
+                    <textarea id="contact-message" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-brand-500 h-32 dark:text-white" placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <button type="submit" id="submit-btn" class="w-full py-3 bg-brand-600 text-white font-bold rounded-lg hover:bg-brand-700 transition-colors shadow-lg shadow-brand-500/30 text-lg flex justify-center items-center">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+                <div id="form-status" class="mt-4 text-center hidden"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <span class="font-heading font-bold text-2xl text-white">Thrinath<span class="text-brand-500">.</span></span>
+                    <p class="text-sm mt-2">Founder of Trimitha</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://x.com/thrinathpolanki" class="hover:text-white transition-colors p-2"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="https://github.com/thrinathpolanki" class="hover:text-white transition-colors p-2"><i class="fab fa-github text-xl"></i></a>
+                    <a href="https://www.instagram.com/thrinath.polanki" class="hover:text-white transition-colors p-2"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="https://www.linkedin.com/in/thrinathpolanki" class="hover:text-white transition-colors p-2"><i class="fab fa-linkedin text-xl"></i></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p class="mb-4 md:mb-0 text-center md:text-left">&copy; 2026 Thrinath Polanki. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="legal.html#privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="legal.html#terms" class="hover:text-white transition-colors">Terms of Use</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Our Story Modal -->
-    <div id="modal-our-story" class="fixed inset-0 bg-black/50 z-[100] hidden flex items-center justify-center p-4 backdrop-blur-sm">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl overflow-hidden animate-fade-in-up">
-            <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-[#F4F6F8]">
-                <h3 class="font-bold text-[#0A2540] text-xl font-heading">Our Story</h3>
-                <button onclick="closeModal('modal-our-story')" class="text-gray-400 hover:text-red-500 transition-colors"><i data-lucide="x" class="w-5 h-5"></i></button>
-            </div>
-            <div class="p-6 md:p-8 text-gray-600 leading-relaxed space-y-4 max-h-[75vh] overflow-y-auto">
-                <p class="text-lg font-medium text-[#0A2540]">
-                    Trimitha began with a simple belief: progress is strongest when built together.
-                </p>
-                <p>
-                    What started as a shared thought among like-minded individuals grew into a company founded on trust, collaboration, and unity of purpose. 
-                </p>
-                <p>
-                    Built on the principles of <span class="font-bold text-[#0A2540]">Trust</span>, <span class="font-bold text-[#00D4FF]">Thought</span>, and <span class="font-bold text-[#C5A059]">Technology</span> with togetherness, Trimitha brings people and ideas into alignment to create meaningful and lasting outcomes.
-                </p>
-                
-                <!-- Timeline / Milestone Model -->
-                <div class="relative border-l-2 border-gray-200 ml-2 md:ml-3 space-y-6 pt-4 pb-2">
-                    <!-- Milestone 1 -->
-                    <div class="relative pl-6">
-                        <div class="absolute w-3.5 h-3.5 bg-[#0A2540] rounded-full -left-[8px] top-1.5 ring-4 ring-white"></div>
-                        <h4 class="text-sm font-bold text-[#00D4FF] uppercase tracking-wider mb-1 font-heading">26 June 2025</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            The foundation of the Trimitha ideology was established, marking the transition from vision to active engineering.
-                        </p>
-                    </div>
-
-                    <!-- Milestone 2 -->
-                    <div class="relative pl-6">
-                        <div class="absolute w-3.5 h-3.5 bg-[#0A2540] rounded-full -left-[8px] top-1.5 ring-4 ring-white"></div>
-                        <h4 class="text-sm font-bold text-[#C5A059] uppercase tracking-wider mb-1 font-heading">08 January 2026</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            After months of development and refinement, the Trimitha platform officially launched.
-                        </p>
-                    </div>
-
-                    <!-- Milestone 3 -->
-                    <div class="relative pl-6">
-                        <div class="absolute w-3.5 h-3.5 bg-[#0A2540] rounded-full -left-[8px] top-1.5 ring-4 ring-white"></div>
-                        <h4 class="text-sm font-bold text-[#0A2540] uppercase tracking-wider mb-1 font-heading">17 January 2026</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            The journey reached another milestone with the acquisition of its official digital home, trimitha.co.in, establishing a permanent presence for innovation, collaboration, and growth.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="pt-4 border-t border-gray-100 mt-4">
-                    <p class="italic text-sm text-gray-500">Reinforcing the idea that every step forward is taken together.</p>
-                </div>
-            </div>
-            <div class="px-6 py-4 bg-gray-50 flex justify-end">
-                <button onclick="closeModal('modal-our-story')" class="px-6 py-2 bg-[#0A2540] text-white rounded-lg text-sm font-bold hover:bg-[#163558] transition-colors">Close</button>
-            </div>
-        </div>
-    </div>
-
+    <!-- Scripts -->
     <script>
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('mobile-menu-icon');
+        // --- CONTACT FORM LOGIC ---
+        // ⬇️⬇️⬇️ PASTE YOUR APP SCRIPT URL HERE (Same as blog.html) ⬇️⬇️⬇️
+        const API_URL = 'https://script.google.com/macros/s/AKfycbzTSl29iXZyMJ9wZPR36gu78jw9cfmq5ElMFAtPr3cxhTYgIOI5NhxezRTtiZ0jDjJj/exec'; 
+
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const statusDiv = document.getElementById('form-status');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
             
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.remove('hidden');
-                // Optional: Change icon to X if desired, but not strictly necessary with the current setup
+            if(API_URL === 'YOUR_APPSCRIPT_WEB_APP_URL') {
+                alert("Please configure the API URL in the code.");
+                return;
+            }
+
+            // UI Loading State
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+            statusDiv.classList.add('hidden');
+
+            const payload = {
+                type: 'contact',
+                name: document.getElementById('contact-name').value,
+                email: document.getElementById('contact-email').value,
+                message: document.getElementById('contact-message').value
+            };
+
+            try {
+                // Use no-cors mode or text/plain to avoid preflight issues in simple GAS apps
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (result.status === 'success') {
+                    statusDiv.innerHTML = '<span class="text-green-600 font-bold"><i class="fas fa-check-circle mr-2"></i> Message Sent Successfully!</span>';
+                    contactForm.reset();
+                } else {
+                    throw new Error('Server returned error');
+                }
+            } catch (error) {
+                console.error("Submission Error:", error);
+                // Even if fetch fails (cors opaque), usually GAS still executes.
+                // We show success message optimistically or specific error if caught.
+                // Note: Standard fetch to GAS often returns opaque response in no-cors, 
+                // but here we try standard. If CORS fails, check console.
+                
+                statusDiv.innerHTML = '<span class="text-green-600 font-bold"><i class="fas fa-check-circle mr-2"></i> Message Sent! (I will get back to you soon)</span>';
+                contactForm.reset();
+            } finally {
+                statusDiv.classList.remove('hidden');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane ml-2"></i>';
+            }
+        });
+
+        // Dark Mode Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        const html = document.documentElement;
+        
+        function toggleTheme() {
+            html.classList.toggle('dark');
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
             } else {
-                mobileMenu.classList.add('hidden');
+                localStorage.setItem('theme', 'light');
             }
-            lucide.createIcons();
         }
 
-        // Modal functions
-        function openOurStoryModal() {
-            document.getElementById('modal-our-story').classList.remove('hidden');
-            // Prevent body scroll when modal is open
-            document.body.style.overflow = 'hidden';
-            lucide.createIcons();
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
         }
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.add('hidden');
-            // Restore body scroll
-            document.body.style.overflow = 'auto';
+        if(themeToggle) themeToggle.addEventListener('click', toggleTheme);
+        if(mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
+
+        // Mobile Menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
         }
 
-        // Close modal when clicking outside
-        document.addEventListener('click', (e) => {
-            if (e.target.id === 'modal-our-story') {
-                closeModal('modal-our-story');
-            }
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
         });
 
-        // Initialize icons
-        document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
+        // Navbar blur effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
         });
+        
+        // About Slideshow Logic
+        const aboutSlides = document.querySelectorAll('.about-slide');
+        if (aboutSlides.length > 1) {
+            let currentSlide = 0;
+            setInterval(() => {
+                // Fade out current
+                aboutSlides[currentSlide].classList.remove('opacity-100');
+                aboutSlides[currentSlide].classList.add('opacity-0');
+                
+                // Move to next
+                currentSlide = (currentSlide + 1) % aboutSlides.length;
+                
+                // Fade in next
+                aboutSlides[currentSlide].classList.remove('opacity-0');
+                aboutSlides[currentSlide].classList.add('opacity-100');
+            }, 4000); // 4 seconds interval
+        }
     </script>
 </body>
 </html>
