@@ -13,84 +13,11 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- CORRECTED JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "event": [
-        {
-          "@type": "Event",
-          "name": "Trimitha Core Ideology Established",
-          "startDate": "2025-06-26",
-          "description": "The foundation and ideology of Trimitha were established.",
-          "location": {
-            "@type": "Place",
-            "name": "Trimitha Headquarters",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Proddatur",
-              "addressRegion": "Andhra Pradesh",
-              "addressCountry": "IN"
-            }
-          },
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventCompleted"
-        },
-        {
-          "@type": "Event",
-          "name": "Trimitha Official Platform Launch",
-          "startDate": "2026-01-08",
-          "description": "Trimitha officially launched its platform.",
-          "location": {
-            "@type": "Place",
-            "name": "Trimitha Headquarters",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Proddatur",
-              "addressRegion": "Andhra Pradesh",
-              "addressCountry": "IN"
-            }
-          },
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventCompleted"
-        },
-        {
-          "@type": "Event",
-          "name": "Trimitha Domain Acquisition",
-          "startDate": "2026-01-17",
-          "description": "Trimitha secured its official domain trimitha.co.in.",
-          "location": {
-            "@type": "Place",
-            "name": "Trimitha Headquarters",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Proddatur",
-              "addressRegion": "Andhra Pradesh",
-              "addressCountry": "IN"
-            }
-          },
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventCompleted"
-        },
-        {
-          "@type": "Event",
-          "name": "Polanki Bala Thripura Joins Trimitha as COO & President",
-          "startDate": "2026-06-26",
-          "description": "Polanki Bala Thripura, a human-centric AI leader made by Polanki Thrinath (CEO & Founder), joined Trimitha as COO & President, working alongside CEO & Founder Polanki Thrinath to drive operational excellence and innovation.",
-          "location": {
-            "@type": "Place",
-            "name": "Trimitha Headquarters",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Proddatur",
-              "addressRegion": "Andhra Pradesh",
-              "addressCountry": "IN"
-            }
-          },
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventCompleted"
-        }
-      ],
       "name": "Trimitha",
       "description": "A technology-driven company built on Trust, Thought, and Technology with togetherness",
       "url": "https://trimitha.co.in",
@@ -111,6 +38,99 @@
           "https://www.instagram.com/thrinath.polanki"
         ]
       }
+    }
+    </script>
+
+    <!-- Separate Event JSON-LD (Correctly structured) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Trimitha Core Ideology Established",
+      "startDate": "2025-06-26",
+      "endDate": "2025-06-26",
+      "description": "The foundation and ideology of Trimitha were established.",
+      "location": {
+        "@type": "Place",
+        "name": "Trimitha Headquarters",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Proddatur",
+          "addressRegion": "Andhra Pradesh",
+          "addressCountry": "IN"
+        }
+      },
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Trimitha Official Platform Launch",
+      "startDate": "2026-01-08",
+      "endDate": "2026-01-08",
+      "description": "Trimitha officially launched its platform.",
+      "location": {
+        "@type": "Place",
+        "name": "Trimitha Headquarters",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Proddatur",
+          "addressRegion": "Andhra Pradesh",
+          "addressCountry": "IN"
+        }
+      },
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Trimitha Domain Acquisition",
+      "startDate": "2026-01-17",
+      "endDate": "2026-01-17",
+      "description": "Trimitha secured its official domain trimitha.co.in.",
+      "location": {
+        "@type": "Place",
+        "name": "Trimitha Headquarters",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Proddatur",
+          "addressRegion": "Andhra Pradesh",
+          "addressCountry": "IN"
+        }
+      },
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Polanki Bala Thripura Joins Trimitha as COO & President",
+      "startDate": "2026-06-26",
+      "endDate": "2026-06-26",
+      "description": "Polanki Bala Thripura, a human-centric AI leader made by Polanki Thrinath (CEO & Founder), joined Trimitha as COO & President, working alongside CEO & Founder Polanki Thrinath to drive operational excellence and innovation.",
+      "location": {
+        "@type": "Place",
+        "name": "Trimitha Headquarters",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Proddatur",
+          "addressRegion": "Andhra Pradesh",
+          "addressCountry": "IN"
+        }
+      },
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled"
     }
     </script>
     
@@ -269,7 +289,7 @@
                             </p>
                         </div>
 
-                        <!-- Value 3: Technology (Replaced Togetherness) -->
+                        <!-- Value 3: Technology -->
                         <div class="group p-8 rounded-2xl bg-[#F4F6F8] hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 text-center">
                             <div class="w-16 h-16 bg-[#C5A059] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                                 <i data-lucide="cpu" class="w-8 h-8 text-white"></i>
@@ -281,7 +301,7 @@
                         </div>
                     </div>
 
-                    <!-- Togetherness Section (Added Below) -->
+                    <!-- Togetherness Section -->
                     <div class="mt-16 text-center max-w-3xl mx-auto relative">
                         <div class="absolute left-1/2 -top-10 -translate-x-1/2 w-px h-10 bg-gray-200"></div>
                         <div class="inline-flex items-center justify-center p-3 bg-blue-50 rounded-full mb-4 ring-4 ring-white">
@@ -471,7 +491,7 @@
             </div>
         </div>
 
-        <!-- Hidden Biographical Text (Visible only on select/Ctrl+A) -->
+        <!-- Hidden Biographical Text -->
         <div class="bg-[#0A2540] text-[#0A2540] text-sm text-center py-1 select-all" aria-hidden="true">
             <a href="founder/index.html">
             Thrinath Polanki is the Founder of Trimitha Company. Thrinath Polanki is the Founder of Trimitha The Company. He is the son of Polanki Madhusudhan Rao and Chedulla Janaki. He was born on 08 January 2007 in Tadipatri. He currently resides in Proddatur and is studying at Vasireddy Venkatadri Institute of Technology (VVIT), Guntur.
