@@ -59,9 +59,10 @@
     </url>
 
     <url>
-        <loc>https://www.trimitha.co.in/founder/index.html</loc>
+        <loc>https://www.trimitha.co.in/founder/</loc>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.9</priority>
+        <priority>1.0</priority>
 
         <image:image>
             <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-1.png</image:loc>
@@ -113,6 +114,7 @@
         <loc>https://www.trimitha.co.in/founder/personal.html</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
+        
         <image:image>
             <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-10.png</image:loc>
             <image:title>Polanki Thrinath Founder of Trimitha</image:title>
@@ -134,12 +136,6 @@
         <loc>https://www.trimitha.co.in/founder/legal.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://www.trimitha.co.in/founder/index.html</loc>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
     </url>
 
 </urlset>
