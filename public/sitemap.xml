@@ -64,29 +64,29 @@
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
 
-        <image:image>
+        <image:image>   
             <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-1.png</image:loc>
             <image:title>Polanki Thrinath Founder of Trimitha</image:title>
         </image:image>
 
         <image:image>
             <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-2.png</image:loc>
-            <image:title>Thrinath Polanki Student Entrepreneur and Founder of Trimitha</image:title>
+            <image:title>Thrinath Polanki Student Entrepreneur CEO, and Founder of Trimitha</image:title>
         </image:image>
 
         <image:image>
             <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-3.png</image:loc>
-            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
+            <image:title>Polanki Thrinath CEO, Founder of Trimitha</image:title>
         </image:image>
 
         <image:image>
             <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-4.png</image:loc>
-            <image:title>Thrinath Polanki Student Entrepreneur and Founder of Trimitha</image:title>
+            <image:title>Thrinath Polanki Student Entrepreneur, CEO and Founder of Trimitha</image:title>
         </image:image>
 
         <image:image>
             <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-6.png</image:loc>
-            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
+            <image:title>Polanki Thrinath CEO, Founder of Trimitha</image:title>
         </image:image>
 
         <image:image>
@@ -96,7 +96,7 @@
 
         <image:image>
             <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-thrinath-founder-trimitha-8.png</image:loc>
-            <image:title>Polanki Thrinath Founder of Trimitha</image:title>
+            <image:title>Polanki Thrinath CEO, Founder of Trimitha</image:title>
         </image:image>
 
         <image:image>
@@ -136,6 +136,18 @@
         <loc>https://www.trimitha.co.in/founder/legal.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.trimitha.co.in/founder/coo.html</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+          <image:loc>https://www.trimitha.co.in/founder/tpimgs/polanki-bala-thripura-coo-trimitha-1.png</image:loc>
+          <image:title>Polanki Bala Thripura - COO, President, Trimitha</image:title>
+          <image:caption>Chief Operating Officer of Trimitha - Polanki Bala Thripura</image:caption>
+        </image:image>
     </url>
 
 </urlset>
