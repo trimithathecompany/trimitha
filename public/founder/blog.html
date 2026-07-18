@@ -99,7 +99,6 @@
             /* we keep it but shorten via line-clamp-2 */
             #blog-grid article .line-clamp-3 {
                 display: -webkit-box;
-                line-clamp: 2;
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
@@ -117,6 +116,20 @@
 
             #article-modal .p-6 {
                 padding: 1rem;
+            }
+
+            /* DECREASED FONT SIZE FOR MAIN ARTICLE CONTENT ON MOBILE */
+            #article-modal #modal-content {
+                font-size: 0.95rem !important;
+                line-height: 1.6 !important;
+            }
+
+            #article-modal #modal-title {
+                font-size: 1.5rem !important;
+            }
+
+            #article-modal .p-6.sm\:p-10 {
+                padding: 1rem !important;
             }
         }
 
