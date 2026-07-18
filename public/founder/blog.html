@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>Blog & Insights | Thrinath Polanki</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <script>
         tailwind.config = {
@@ -15,16 +16,170 @@
             theme: {
                 extend: {
                     fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
-                    colors: { brand: { 50:'#f0f9ff', 100:'#e0f2fe', 500:'#0ea5e9', 600:'#0284c7', 900:'#0c4a6e' }, dark: { bg:'#0f172a', card:'#1e293b', border:'#334155' } }
+                    colors: { brand: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#0284c7', 900: '#0c4a6e' }, dark: { bg: '#0f172a', card: '#1e293b', border: '#334155' } }
                 }
             }
         }
     </script>
     <style>
-        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .dark .glass-nav { background: rgba(15, 23, 42, 0.8); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        /* base & glass */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .dark .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* mobile: 2 cards per row, equal height, consistent spacing */
+        @media (max-width: 640px) {
+            #blog-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                /* consistent spacing */
+            }
+
+            #blog-grid article {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                /* equal height */
+                min-height: 0;
+                /* allow flex shrink */
+            }
+
+            #blog-grid article .h-40 {
+                height: 140px;
+                /* slightly smaller on mobile, scales well */
+            }
+
+            #blog-grid article .p-5 {
+                padding: 0.75rem;
+                /* compact but readable */
+            }
+
+            #blog-grid article h3 {
+                font-size: 0.95rem;
+                line-height: 1.3;
+                margin-bottom: 0.25rem;
+            }
+
+            #blog-grid article p.text-sm {
+                font-size: 0.7rem;
+                line-height: 1.3;
+                margin-bottom: 0.25rem;
+            }
+
+            #blog-grid article .text-xs {
+                font-size: 0.6rem;
+            }
+
+            #blog-grid article button {
+                font-size: 0.7rem;
+            }
+
+            #blog-grid article .group .absolute.top-4.left-4 {
+                top: 0.5rem;
+                left: 0.5rem;
+                padding: 0.15rem 0.5rem;
+                font-size: 0.55rem;
+            }
+
+            /* ensure images don't overflow */
+            #blog-grid article img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+
+            /* hide overview text on very small screens to keep cards clean (optional) */
+            /* we keep it but shorten via line-clamp-2 */
+            #blog-grid article .line-clamp-3 {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            /* adjust modal for mobile */
+            #article-modal .max-w-3xl {
+                margin: 0.5rem;
+                width: calc(100% - 1rem);
+            }
+
+            #article-modal .h-64 {
+                height: 200px;
+            }
+
+            #article-modal .p-6 {
+                padding: 1rem;
+            }
+        }
+
+        /* tablet and up: keep original 3-4 columns */
+        @media (min-width: 641px) {
+            #blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* tablet: 2 */
+                gap: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #blog-grid {
+                grid-template-columns: repeat(3, 1fr);
+                /* desktop: 3 */
+                gap: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            #blog-grid {
+                grid-template-columns: repeat(4, 1fr);
+                /* xl: 4 */
+                gap: 1.5rem;
+            }
+        }
+
+        /* keep original card styles, only override mobile specifics */
+        #blog-grid article {
+            transition: all 0.3s ease;
+        }
+
+        /* fadeInUp animation (already used) */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-\[fadeInUp_0\.5s_ease-out\] {
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        /* line-clamp utilities if not present */
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
     </style>
 </head>
+
 <body class="bg-slate-50 text-slate-900 dark:bg-dark-bg dark:text-slate-100 font-sans antialiased transition-colors duration-300">
 
     <!-- Navigation -->
@@ -32,12 +187,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center"><a href="index.html" class="font-heading font-bold text-2xl tracking-tight z-50">Thrinath<span class="text-brand-500"> Polanki</span></a></div>
-                
+
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-sm font-medium hover:text-brand-500 transition-colors">Home</a>
                     <a href="index.html#about" class="text-sm font-medium hover:text-brand-500 transition-colors">About</a>
-                    <a href="index.html#trimitha" class="hover:opacity-80 transition-opacity flex items-center"><img src="Trimitha Logo.png" alt="Trimitha" class="h-8 w-auto"></a>
+                    <a href="index.html#trimitha" class="hover:opacity-80 transition-opacity flex items-center"><img src="Trimitha Logo.png" alt="Trimitha" class="h-8 w-auto" /></a>
                     <a href="personal.html" class="text-sm font-medium hover:text-brand-500 transition-colors">Personal</a>
                     <a href="index.html#projects" class="text-sm font-medium hover:text-brand-500 transition-colors">Projects</a>
                     <a href="blog.html" class="text-sm font-medium text-brand-600 dark:text-brand-400 font-bold transition-colors">Blog</a>
@@ -52,13 +207,13 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark-card border-b dark:border-dark-border shadow-xl absolute w-full left-0 top-20">
             <div class="px-4 pt-2 pb-6 space-y-2 text-center">
                 <a href="index.html" class="block px-3 py-3 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Home</a>
                 <a href="index.html#about" class="block px-3 py-3 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">About</a>
-                <a href="index.html#trimitha" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><img src="Trimitha Logo.png" alt="Trimitha" class="h-8 w-auto mx-auto"></a>
+                <a href="index.html#trimitha" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"><img src="Trimitha Logo.png" alt="Trimitha" class="h-8 w-auto mx-auto" /></a>
                 <a href="personal.html" class="block px-3 py-3 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Personal</a>
                 <a href="index.html#projects" class="block px-3 py-3 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Projects</a>
                 <a href="blog.html" class="block px-3 py-3 rounded-lg text-base font-medium bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400 transition-colors">Blog</a>
@@ -73,13 +228,13 @@
             <span class="text-brand-600 dark:text-brand-400 font-semibold tracking-wide uppercase text-sm mb-2 block">Insights & Thoughts</span>
             <h1 class="font-heading text-4xl md:text-5xl font-bold mb-4 dark:text-white">The Founder's Journal</h1>
             <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto mb-8">Thoughts on technology, startups, and the journey of building Trimitha.</p>
-            
+
             <!-- Search Bar -->
             <div class="max-w-lg mx-auto relative group">
                 <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                     <i class="fas fa-search text-slate-400 group-focus-within:text-brand-500 transition-colors"></i>
                 </div>
-                <input type="text" id="search-input" placeholder="Search by title or category..." class="block w-full pl-11 pr-4 py-3 bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-700 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent shadow-sm dark:text-white transition-all placeholder-slate-400 dark:placeholder-slate-500" oninput="filterPosts()">
+                <input type="text" id="search-input" placeholder="Search by title or category..." class="block w-full pl-11 pr-4 py-3 bg-white dark:bg-dark-card border border-slate-200 dark:border-slate-700 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent shadow-sm dark:text-white transition-all placeholder-slate-400 dark:placeholder-slate-500" oninput="filterPosts()" />
             </div>
         </div>
     </header>
@@ -88,6 +243,7 @@
     <section class="pb-24 bg-slate-50 dark:bg-dark-bg min-h-screen px-4">
         <div class="max-w-7xl mx-auto">
             <div id="blog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- default loading state (will be replaced) -->
                 <div class="col-span-full text-center py-20 text-slate-500">
                     <i class="fas fa-circle-notch fa-spin text-3xl mb-4 text-brand-500"></i>
                     <p>Fetching latest posts...</p>
@@ -104,7 +260,7 @@
                 <button onclick="closeArticleModal()" class="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-black/70 text-white rounded-full backdrop-blur-md transition-all duration-200 shadow-lg focus:outline-none transform hover:scale-105"><i class="fas fa-times text-lg"></i></button>
                 <div class="max-h-[85vh] overflow-y-auto">
                     <div class="h-64 sm:h-80 w-full relative">
-                        <img id="modal-image" src="" alt="" class="w-full h-full object-cover" referrerpolicy="no-referrer">
+                        <img id="modal-image" src="" alt="" class="w-full h-full object-cover" referrerpolicy="no-referrer" />
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                             <span id="modal-category" class="px-3 py-1 text-xs font-bold text-white bg-brand-500 rounded-full mb-3 inline-block shadow-lg"></span>
@@ -131,16 +287,18 @@
         // ------------------------------------
         // ⬇️ PASTE YOUR APP SCRIPT URL HERE ⬇️
         // ------------------------------------
-        const API_URL = 'https://script.google.com/macros/s/AKfycbyFay7jAsZkFrPbYaHzMOh_aofKyGV1fweLT4__jsVgSA6MI6sfNeH_v6yBW-wChj7MRw/exec'; 
+        const API_URL =
+            'https://script.google.com/macros/s/AKfycbyFay7jAsZkFrPbYaHzMOh_aofKyGV1fweLT4__jsVgSA6MI6sfNeH_v6yBW-wChj7MRw/exec';
 
         let allPosts = []; // Store posts globally for searching
 
         async function fetchPosts() {
             try {
-                if(API_URL === 'YOUR_APPSCRIPT_WEB_APP_URL') { renderError("Config Error: Paste Web App URL."); return; }
-                const response = await fetch(`${API_URL}?t=${new Date().getTime()}`, { method: 'GET', redirect: "follow", headers: { "Content-Type": "text/plain;charset=utf-8" } });
+                if (API_URL === 'YOUR_APPSCRIPT_WEB_APP_URL') { renderError("Config Error: Paste Web App URL."); return; }
+                const response = await fetch(`${API_URL}?t=${new Date().getTime()}`, { method: 'GET', redirect: "follow",
+                    headers: { "Content-Type": "text/plain;charset=utf-8" } });
                 if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
-                
+
                 allPosts = await response.json(); // Save to global variable
                 renderPosts(allPosts);
             } catch (error) {
@@ -151,24 +309,25 @@
 
         function filterPosts() {
             const query = document.getElementById('search-input').value.toLowerCase();
-            const filtered = allPosts.filter(post => 
-                post.title.toLowerCase().includes(query) || 
+            const filtered = allPosts.filter(post =>
+                post.title.toLowerCase().includes(query) ||
                 post.category.toLowerCase().includes(query)
             );
             renderPosts(filtered);
         }
 
         function renderError(msg) {
-            document.getElementById('blog-grid').innerHTML = `<div class="col-span-full text-center py-10 bg-red-50 dark:bg-red-900/10 rounded-xl border border-red-100 dark:border-red-900/30 p-6">${msg}</div>`;
+            document.getElementById('blog-grid').innerHTML =
+                `<div class="col-span-full text-center py-10 bg-red-50 dark:bg-red-900/10 rounded-xl border border-red-100 dark:border-red-900/30 p-6">${msg}</div>`;
         }
 
         function renderPosts(posts) {
             const grid = document.getElementById('blog-grid');
             grid.innerHTML = '';
-            
-            if (!posts || posts.length === 0) { 
-                grid.innerHTML = `<div class="col-span-full text-center py-10 text-slate-500">No posts found.</div>`; 
-                return; 
+
+            if (!posts || posts.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-10 text-slate-500">No posts found.</div>`;
+                return;
             }
 
             // Copy array to reverse for display (newest first) without mutating original if filtering
@@ -176,21 +335,23 @@
 
             displayPosts.forEach(post => {
                 const article = document.createElement('article');
-                article.className = 'bg-white dark:bg-dark-card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 flex flex-col h-full animate-[fadeInUp_0.5s_ease-out]';
-                const fallbackImg = `https://ui-avatars.com/api/?name=${encodeURIComponent(post.title)}&background=random&color=fff&size=500`;
-                
+                article.className =
+                    'bg-white dark:bg-dark-card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 flex flex-col h-full animate-[fadeInUp_0.5s_ease-out]';
+                const fallbackImg =
+                    `https://ui-avatars.com/api/?name=${encodeURIComponent(post.title)}&background=random&color=fff&size=500`;
+
                 article.innerHTML = `
-                    <div class="h-40 bg-slate-200 dark:bg-slate-700 relative overflow-hidden group cursor-pointer">
-                        <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${fallbackImg}';">
-                        <div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brand-600 dark:text-brand-400">${post.category}</div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow">
-                        <div class="text-xs text-slate-500 mb-2">${post.date}</div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3 line-clamp-2">${post.title}</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-3 line-clamp-3 flex-grow">${post.overview}</p>
-                        <button class="inline-flex items-center text-brand-600 dark:text-brand-400 font-semibold text-sm hover:underline mt-auto">Read Article <i class="fas fa-arrow-right ml-2"></i></button>
-                    </div>
-                `;
+                        <div class="h-40 bg-slate-200 dark:bg-slate-700 relative overflow-hidden group cursor-pointer">
+                            <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${fallbackImg}';">
+                            <div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brand-600 dark:text-brand-400">${post.category}</div>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <div class="text-xs text-slate-500 mb-2">${post.date}</div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3 line-clamp-2">${post.title}</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-3 line-clamp-3 flex-grow">${post.overview}</p>
+                            <button class="inline-flex items-center text-brand-600 dark:text-brand-400 font-semibold text-sm hover:underline mt-auto">Read Article <i class="fas fa-arrow-right ml-2"></i></button>
+                        </div>
+                    `;
                 const openModal = () => openArticleModal(post, fallbackImg);
                 article.querySelector('.group').addEventListener('click', openModal);
                 article.querySelector('button').addEventListener('click', openModal);
@@ -224,7 +385,8 @@
         }
 
         // Initialize Theme
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia(
+                '(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         } else {
             document.documentElement.classList.remove('dark');
@@ -242,8 +404,10 @@
         const mobileMenu = document.getElementById('mobile-menu');
         if (mobileBtn && mobileMenu) {
             mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-            document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+            document.querySelectorAll('#mobile-menu a').forEach(link => link.addEventListener('click', () => mobileMenu
+                .classList.add('hidden')));
         }
     </script>
+
 </body>
 </html>
