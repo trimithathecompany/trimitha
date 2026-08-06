@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trimitha | Trust • Thought • Technology </title>
+    <title>Trimitha | Trust • Thought • Technology</title>
     
     <!-- ===== HTTP HEADER META TAGS FOR INDEXING ===== -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -16,11 +16,12 @@
     <meta name="keywords" content="Trimitha, Polanki Thrinath, CEO Founder Trimitha, Polanki Bala Thripura, AI COO, Human Centric AI, Technology Company, Trust Thought Technology, Innovation, Consulting">
     <meta name="author" content="Polanki Thrinath, Trimitha">
     
-    <!-- ===== CANONICAL TAG - FIXED with correct URL ===== -->
+    <!-- ===== CANONICAL TAG - FIXED with trailing slash for consistency ===== -->
     <link rel="canonical" href="https://www.trimitha.co.in/">
     
-    <!-- ===== ALTERNATE LANGUAGE VERSIONS ===== -->
+    <!-- ===== ALTERNATE LANGUAGE VERSIONS - Added x-default ===== -->
     <link rel="alternate" hreflang="en" href="https://www.trimitha.co.in/">
+    <link rel="alternate" hreflang="x-default" href="https://www.trimitha.co.in/">
     
     <!-- ===== Open Graph / Facebook ===== -->
     <meta property="og:type" content="website">
@@ -46,14 +47,39 @@
     <link rel="icon" type="image/png" href="https://www.trimitha.co.in/Images/Trimitha%20Logo.png" />
     <link rel="apple-touch-icon" href="https://www.trimitha.co.in/Images/Trimitha%20Logo.png">
     
-    <!-- ===== Schema Markup - Fixed URLs and removed duplicate events ===== -->
+    <!-- ===== Sitemap Reference ===== -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.trimitha.co.in/sitemap.xml">
+    
+    <!-- ===== Schema Markup - Consolidated and Enhanced ===== -->
+    
+    <!-- WebSite Schema (NEW) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Trimitha",
+      "url": "https://www.trimitha.co.in/",
+      "description": "A technology-driven company built on Trust, Thought, and Technology with togetherness. Founded by Polanki Thrinath, featuring human-centric AI COO Polanki Bala Thripura.",
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.trimitha.co.in/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Organization Schema (ENHANCED) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Trimitha",
       "description": "A technology-driven company built on Trust, Thought, and Technology with togetherness. Founded by Polanki Thrinath, featuring human-centric AI COO Polanki Bala Thripura.",
-      "url": "https://www.trimitha.co.in",
+      "url": "https://www.trimitha.co.in/",
       "logo": "https://www.trimitha.co.in/Images/Trimitha%20Logo.png",
       "image": "https://www.trimitha.co.in/Images/Trimitha%20Logo.png",
       "foundingDate": "2025-06-26",
@@ -80,6 +106,18 @@
         "https://www.instagram.com/trimitha.co/",
         "https://twitter.com/trimithacompany"
       ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Proddatur",
+        "addressRegion": "Andhra Pradesh",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@trimitha.co.in",
+        "contactType": "general",
+        "availableLanguage": ["English"]
+      },
       "event": [
         {
           "@type": "Event",
@@ -263,16 +301,16 @@
     <nav class="fixed w-full z-50 border-b border-gray-800 transition-all duration-300 nav-glass">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <!-- Logo -->
-                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer z-50">
-                    <img src="Images/Trimitha Logo.png" alt="Trimitha Logo" class="h-10 w-auto object-contain">
+                <!-- Logo - Fixed href to use canonical URL -->
+                <a href="/" class="flex-shrink-0 flex items-center gap-2 cursor-pointer z-50" aria-label="Trimitha Homepage">
+                    <img src="Images/Trimitha Logo.png" alt="Trimitha Logo - Technology Company Founded by Polanki Thrinath" class="h-10 w-auto object-contain" loading="lazy">
                     <span class="font-bold text-2xl tracking-tight text-white font-heading">TRIMITHA</span>
                 </a>
 
-                <!-- Desktop Menu -->
+                <!-- Desktop Menu - Fixed all internal links -->
                 <div class="hidden md:flex items-center space-x-8" id="desktop-menu">
                     <div class="public-nav flex items-center space-x-8">
-                        <a href="/" class="nav-link text-sm font-medium tracking-wide text-white hover:text-[#00D4FF] transition-colors">HOME</a>
+                        <a href="/" class="nav-link text-sm font-medium tracking-wide text-white hover:text-[#00D4FF] transition-colors" aria-current="page">HOME</a>
                         <a href="about.html" class="nav-link text-sm font-medium tracking-wide text-white hover:text-[#00D4FF] transition-colors">ABOUT</a>
                         <a href="services.html" class="nav-link text-sm font-medium tracking-wide text-white hover:text-[#00D4FF] transition-colors">SERVICES</a>
                         <a href="contact.html" class="nav-link text-sm font-medium tracking-wide text-white hover:text-[#00D4FF] transition-colors">CONTACT</a>
@@ -285,17 +323,17 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center z-50">
-                    <button onclick="toggleMobileMenu()" class="text-white hover:text-[#00D4FF] transition-colors focus:outline-none p-2">
+                    <button onclick="toggleMobileMenu()" class="text-white hover:text-[#00D4FF] transition-colors focus:outline-none p-2" aria-label="Toggle Menu">
                         <i data-lucide="menu" class="w-7 h-7" id="mobile-menu-icon"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
+        <!-- Mobile Menu Dropdown - Fixed all internal links -->
         <div id="mobile-menu" class="hidden md:hidden absolute w-full left-0 top-20 bg-[#0A2540] border-t border-gray-800 shadow-2xl overflow-hidden transition-all duration-300 ease-in-out">
             <div class="flex flex-col p-4 space-y-2">
-                <a href="/" class="block text-base font-bold text-white hover:text-[#00D4FF] hover:bg-white/5 py-3 px-4 rounded-lg transition-all">HOME</a>
+                <a href="/" class="block text-base font-bold text-white hover:text-[#00D4FF] hover:bg-white/5 py-3 px-4 rounded-lg transition-all" aria-current="page">HOME</a>
                 <a href="about.html" class="block text-base font-bold text-white hover:text-[#00D4FF] hover:bg-white/5 py-3 px-4 rounded-lg transition-all">ABOUT</a>
                 <a href="services.html" class="block text-base font-bold text-white hover:text-[#00D4FF] hover:bg-white/5 py-3 px-4 rounded-lg transition-all">SERVICES</a>
                 <a href="contact.html" class="block text-base font-bold text-white hover:text-[#00D4FF] hover:bg-white/5 py-3 px-4 rounded-lg transition-all">CONTACT</a>
@@ -309,11 +347,9 @@
 
     <main>
         <!-- Hero Section -->
-        <!-- Fixed: Increased top padding for mobile (pt-32) and optimized spacing -->
         <div class="relative pt-32 pb-16 md:pt-20 md:pb-0 min-h-screen flex items-center overflow-hidden bg-[#0A2540]">
             <!-- Abstract Background -->
             <div class="absolute inset-0 bg-[#0A2540]">
-                <!-- Fixed: Adjusted background skew width/opacity for mobile readability -->
                 <div class="absolute top-0 right-0 w-full md:w-2/3 h-full bg-[#0d2e4f] opacity-30 md:opacity-50 transform -skew-x-12 md:translate-x-20 translate-x-10"></div>
                 <div class="absolute bottom-0 left-0 w-3/4 md:w-1/2 h-1/2 bg-[#00D4FF] opacity-10 md:opacity-5 blur-[80px] md:blur-[120px] rounded-full"></div>
             </div>
@@ -326,7 +362,6 @@
                         WELCOME TO TRIMITHA
                     </div>
                     
-                    <!-- Fixed: Responsive text sizes for better mobile wrapping -->
                     <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-[1.15] font-heading">
                         Synergy in <br class="hidden sm:block" />
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#008ba6]">Motion.</span>
@@ -348,7 +383,6 @@
                 
                 <!-- Abstract Graphic -->
                 <div class="flex justify-center relative order-2 md:order-2 mt-4 md:mt-0">
-                    <!-- Fixed: Responsive width/height for graphic (w-48 on mobile, w-80 on desktop) -->
                     <div class="relative w-56 h-56 md:w-80 md:h-80 transition-all duration-500">
                         <!-- Spinning borders -->
                         <div class="absolute inset-0 border-2 border-[#C5A059] rounded-full animate-spin-slow opacity-30"></div>
@@ -356,7 +390,7 @@
                         
                         <!-- Logo -->
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <img src="Images/Trimitha Logo.png" alt="Trimitha Hero Graphic" class="w-28 h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_15px_rgba(0,212,255,0.3)]">
+                            <img src="Images/Trimitha Logo.png" alt="Trimitha Logo - Trust Thought Technology Company" class="w-28 h-28 md:w-32 md:h-32 object-contain drop-shadow-[0_0_15px_rgba(0,212,255,0.3)]" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -443,13 +477,13 @@
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer - Fixed all internal links -->
     <footer class="bg-[#0A2540] text-white pt-16 md:pt-20 pb-10 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-1 md:col-span-1">
                     <div class="flex items-center gap-2 mb-6">
-                        <img src="Images/Trimitha Logo.png" alt="Trimitha Logo" class="h-10 w-auto object-contain">
+                        <img src="Images/Trimitha Logo.png" alt="Trimitha Logo - Technology Company" class="h-10 w-auto object-contain" loading="lazy">
                         <span class="font-bold text-xl font-heading">TRIMITHA</span>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed">
@@ -460,7 +494,7 @@
                 <div>
                     <h4 class="font-bold text-[#C5A059] mb-6 font-heading">Navigation</h4>
                     <ul class="space-y-3 text-gray-300 text-sm">
-                        <li><a href="index.html" class="hover:text-[#00D4FF] transition-colors">Home</a></li>
+                        <li><a href="/" class="hover:text-[#00D4FF] transition-colors">Home</a></li>
                         <li><a href="about.html" class="hover:text-[#00D4FF] transition-colors">About Us</a></li>
                         <li><a href="services.html" class="hover:text-[#00D4FF] transition-colors">Services</a></li>
                         <li><a href="contact.html" class="hover:text-[#00D4FF] transition-colors">Careers</a></li>
@@ -488,13 +522,13 @@
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
                 <p>&copy; 2026 Trimitha All rights reserved.</p>
                 <div class="flex gap-4 mt-4 md:mt-0">
-                    <a href="https://www.linkedin.com/company/trimitha" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-[#00D4FF] hover:text-[#0A2540] transition-colors group">
+                    <a href="https://www.linkedin.com/company/trimitha" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-[#00D4FF] hover:text-[#0A2540] transition-colors group" aria-label="LinkedIn">
                         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                     </a>
-                    <a href="https://x.com/trimithacompany" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-[#00D4FF] hover:text-[#0A2540] transition-colors group">
+                    <a href="https://x.com/trimithacompany" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-[#00D4FF] hover:text-[#0A2540] transition-colors group" aria-label="Twitter">
                         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                     </a>
-                    <a href="https://www.instagram.com/trimitha.co/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-[#00D4FF] hover:text-[#0A2540] transition-colors group">
+                    <a href="https://www.instagram.com/trimitha.co/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-800 hover:bg-[#00D4FF] hover:text-[#0A2540] transition-colors group" aria-label="Instagram">
                         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                     </a>
                 </div>
@@ -507,7 +541,7 @@
         <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl overflow-hidden animate-fade-in-up">
             <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-[#F4F6F8]">
                 <h3 class="font-bold text-[#0A2540] text-xl font-heading">Our Story</h3>
-                <button onclick="closeModal('modal-our-story')" class="text-gray-400 hover:text-red-500 transition-colors"><i data-lucide="x" class="w-5 h-5"></i></button>
+                <button onclick="closeModal('modal-our-story')" class="text-gray-400 hover:text-red-500 transition-colors" aria-label="Close modal"><i data-lucide="x" class="w-5 h-5"></i></button>
             </div>
             <div class="p-6 md:p-8 text-gray-600 leading-relaxed space-y-4 max-h-[75vh] overflow-y-auto">
                 <p class="text-lg font-medium text-[#0A2540]">
@@ -568,7 +602,6 @@
             
             if (mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.remove('hidden');
-                // Optional: Change icon to X if desired, but not strictly necessary with the current setup
             } else {
                 mobileMenu.classList.add('hidden');
             }
