@@ -1,37 +1,115 @@
+# ============================================
+# .htaccess for trimitha.co.in
+# Technical SEO & URL Normalization
+# ============================================
+
 # Enable Rewrite Engine
 RewriteEngine On
+RewriteBase /
 
-# Redirect /founder to /founder/ (with trailing slash)
+# ============================================
+# FORCE HTTPS (Recommended for production)
+# ============================================
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# ============================================
+# FORCE WWW (Canonical domain: www.trimitha.co.in)
+# ============================================
+RewriteCond %{HTTP_HOST} ^trimitha\.co\.in$ [NC]
+RewriteRule ^(.*)$ https://www.trimitha.co.in/$1 [R=301,L]
+
+# ============================================
+# CANONICAL URL NORMALIZATION
+# Remove index.html from URLs
+# ============================================
+RewriteRule ^index\.html$ / [R=301,L]
+
+# ============================================
+# FOUNDER PAGE NORMALIZATION
+# All founder URLs redirect to canonical /founder/
+# ============================================
+
+# /founder -> /founder/ (add trailing slash)
+RewriteCond %{REQUEST_URI} ^/founder$ [NC]
 RewriteRule ^founder$ /founder/ [R=301,L]
 
-# Redirect /founder/index.html to /founder/
+# /founder/index.html -> /founder/
+RewriteCond %{REQUEST_URI} ^/founder/index\.html$ [NC]
 RewriteRule ^founder/index\.html$ /founder/ [R=301,L]
 
-# Redirect /founder/index to /founder/
+# /founder/index -> /founder/
+RewriteCond %{REQUEST_URI} ^/founder/index$ [NC]
 RewriteRule ^founder/index$ /founder/ [R=301,L]
 
-# Redirect /founder/ to /founder/index.html (internal - no redirect)
-# This ensures /founder/ loads index.html without changing URL
+# /founder/ -> serves /founder/index.html (internal rewrite)
+RewriteCond %{REQUEST_URI} ^/founder/$ [NC]
 RewriteRule ^founder/$ /founder/index.html [L]
 
-# Prevent directory listing
+# ============================================
+# PREVENT DIRECTORY LISTING
+# ============================================
 Options -Indexes
 
-# Set default charset
+# ============================================
+# SET DEFAULT CHARSET
+# ============================================
 AddDefaultCharset UTF-8
 
-# Cache static files for 1 year (optional - improves performance)
-<FilesMatch "\.(jpg|jpeg|png|gif|ico|svg|webp|css|js|woff|woff2|ttf|eot)$">
-    Header set Cache-Control "max-age=31536000, public"
+# ============================================
+# CACHE STATIC ASSETS (1 year)
+# ============================================
+<FilesMatch "\.(jpg|jpeg|png|gif|ico|svg|webp|css|js|woff|woff2|ttf|eot|pdf)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
 </FilesMatch>
 
-# Prevent access to .htaccess and other sensitive files
-<FilesMatch "^\.(htaccess|htpasswd|env|git)">
+# ============================================
+# CACHE HTML (shorter duration)
+# ============================================
+<FilesMatch "\.(html|htm|xml|txt)$">
+    Header set Cache-Control "max-age=3600, public"
+</FilesMatch>
+
+# ============================================
+# PREVENT ACCESS TO SENSITIVE FILES
+# ============================================
+<FilesMatch "^\.(htaccess|htpasswd|env|git|gitignore)">
     Order allow,deny
     Deny from all
 </FilesMatch>
 
-# Error pages (optional)
+# ============================================
+# ERROR DOCUMENTS
+# ============================================
 ErrorDocument 404 /404.html
 ErrorDocument 403 /403.html
 ErrorDocument 500 /500.html
+
+# ============================================
+# COMPRESS TEXT FILES (GZIP)
+# ============================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript text/xml application/javascript application/x-javascript application/json application/xml
+</IfModule>
+
+# ============================================
+# REMOVE TRAILING SLASH ON NON-DIRECTORIES
+# ============================================
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# ============================================
+# SECURITY HEADERS
+# ============================================
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ============================================
+# BLOG & LEGACY PAGE REDIRECTS (as needed)
+# ============================================
+# Add any additional redirects here
