@@ -1,36 +1,35 @@
-# robots.txt for trimitha.co.in
-# Generated for optimal Google indexing
+# ======================================================
+# TRIMITHA - robots.txt
+# Final Host: https://www.trimitha.co.in/
+# Sitemap: https://www.trimitha.co.in/sitemap.xml
+# ======================================================
 
 User-agent: *
 Allow: /
+
+# Allow all important content
+Allow: /founder/
+Allow: /Images/
+Allow: /founder/tpimgs/
+
+# Block only sensitive/private areas
 Disallow: /admin/
 Disallow: /includes/
 Disallow: /tmp/
 Disallow: /logs/
 
-# Allow crawling of all founder content
-Allow: /founder/
-Allow: /founder/tpimgs/
+# Do NOT block query parameters (important for tracking)
+# Removed: Disallow: /*?* and /*&*
 
 # Sitemap location
 Sitemap: https://www.trimitha.co.in/sitemap.xml
 
-# Crawl delay for less aggressive bots
+# Crawl delay (gentle)
 Crawl-delay: 1
 
-# Specific directives for Googlebot
+# Googlebot specific
 User-agent: Googlebot
 Allow: /
 Allow: /founder/
 Allow: /Images/
 Allow: /founder/tpimgs/
-
-# Prevent indexing of duplicate content
-User-agent: *
-Disallow: /*?*
-Disallow: /*&*
-
-# Block common spam paths
-Disallow: /wp-content/
-Disallow: /wp-includes/
-Disallow: /wp-admin/
