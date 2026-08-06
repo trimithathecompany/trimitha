@@ -1,115 +1,118 @@
-# ============================================
-# .htaccess for trimitha.co.in
-# Technical SEO & URL Normalization
-# ============================================
+# ======================================================
+# Trimitha - Apache .htaccess Configuration
+# Purpose: Single 301 redirect to canonical URL
+# Final Destination: https://www.trimitha.co.in/
+# ======================================================
 
-# Enable Rewrite Engine
-RewriteEngine On
-RewriteBase /
-
-# ============================================
-# FORCE HTTPS (Recommended for production)
-# ============================================
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-
-# ============================================
-# FORCE WWW (Canonical domain: www.trimitha.co.in)
-# ============================================
-RewriteCond %{HTTP_HOST} ^trimitha\.co\.in$ [NC]
-RewriteRule ^(.*)$ https://www.trimitha.co.in/$1 [R=301,L]
-
-# ============================================
-# CANONICAL URL NORMALIZATION
-# Remove index.html from URLs
-# ============================================
-RewriteRule ^index\.html$ / [R=301,L]
-
-# ============================================
-# FOUNDER PAGE NORMALIZATION
-# All founder URLs redirect to canonical /founder/
-# ============================================
-
-# /founder -> /founder/ (add trailing slash)
-RewriteCond %{REQUEST_URI} ^/founder$ [NC]
-RewriteRule ^founder$ /founder/ [R=301,L]
-
-# /founder/index.html -> /founder/
-RewriteCond %{REQUEST_URI} ^/founder/index\.html$ [NC]
-RewriteRule ^founder/index\.html$ /founder/ [R=301,L]
-
-# /founder/index -> /founder/
-RewriteCond %{REQUEST_URI} ^/founder/index$ [NC]
-RewriteRule ^founder/index$ /founder/ [R=301,L]
-
-# /founder/ -> serves /founder/index.html (internal rewrite)
-RewriteCond %{REQUEST_URI} ^/founder/$ [NC]
-RewriteRule ^founder/$ /founder/index.html [L]
-
-# ============================================
-# PREVENT DIRECTORY LISTING
-# ============================================
-Options -Indexes
-
-# ============================================
-# SET DEFAULT CHARSET
-# ============================================
-AddDefaultCharset UTF-8
-
-# ============================================
-# CACHE STATIC ASSETS (1 year)
-# ============================================
-<FilesMatch "\.(jpg|jpeg|png|gif|ico|svg|webp|css|js|woff|woff2|ttf|eot|pdf)$">
-    Header set Cache-Control "max-age=31536000, public, immutable"
-</FilesMatch>
-
-# ============================================
-# CACHE HTML (shorter duration)
-# ============================================
-<FilesMatch "\.(html|htm|xml|txt)$">
-    Header set Cache-Control "max-age=3600, public"
-</FilesMatch>
-
-# ============================================
-# PREVENT ACCESS TO SENSITIVE FILES
-# ============================================
-<FilesMatch "^\.(htaccess|htpasswd|env|git|gitignore)">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
-
-# ============================================
-# ERROR DOCUMENTS
-# ============================================
-ErrorDocument 404 /404.html
-ErrorDocument 403 /403.html
-ErrorDocument 500 /500.html
-
-# ============================================
-# COMPRESS TEXT FILES (GZIP)
-# ============================================
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript text/xml application/javascript application/x-javascript application/json application/xml
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # ==================================================
+    # REDIRECT TO HTTPS + WWW (Single 301 Redirect)
+    # ==================================================
+    
+    # Step 1: Redirect HTTP to HTTPS (non-WWW or WWW)
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP_HOST} ^(www\.)?trimitha\.co\.in$ [NC]
+    RewriteRule ^(.*)$ https://www.trimitha.co.in/$1 [R=301,L]
+    
+    # Step 2: Redirect non-WWW HTTPS to WWW HTTPS
+    RewriteCond %{HTTP_HOST} ^trimitha\.co\.in$ [NC]
+    RewriteRule ^(.*)$ https://www.trimitha.co.in/$1 [R=301,L]
+    
+    # ==================================================
+    # REMOVE TRAILING SLASH FOR NON-DIRECTORY URLs
+    # ==================================================
+    
+    # Remove trailing slash for non-directory files
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [R=301,L]
+    
+    # ==================================================
+    # REMOVE INDEX.HTML FROM URLS
+    # ==================================================
+    
+    # Redirect index.html to root or directory path
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^?]*)(index\.html?)?(\?.*)?\ HTTP/
+    RewriteRule ^(.*)(index\.html?)$ /$1 [R=301,L]
+    
+    # Redirect /index to root
+    RewriteRule ^index\.html?$ / [R=301,L]
+    
+    # ==================================================
+    # HANDLE .html EXTENSION REDIRECTS
+    # ==================================================
+    
+    # Redirect .html pages to extensionless URLs
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.html -f
+    RewriteRule ^(.*?)/?$ /$1.html [L]
+    
+    # Redirect requests for .html to extensionless (SEO)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+    RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+    
+    # ==================================================
+    # CUSTOM PAGES (if .html files exist)
+    # ==================================================
+    
+    # If the requested file doesn't exist, check for .html
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.html -f
+    RewriteRule ^(.*)$ /$1.html [L]
+    
 </IfModule>
 
-# ============================================
-# REMOVE TRAILING SLASH ON NON-DIRECTORIES
-# ============================================
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} (.+)/$
-RewriteRule ^ %1 [R=301,L]
-
-# ============================================
+# ======================================================
 # SECURITY HEADERS
-# ============================================
+# ======================================================
+
 <IfModule mod_headers.c>
-    Header set X-Content-Type-Options "nosniff"
-    Header set X-Frame-Options "SAMEORIGIN"
-    Header set X-XSS-Protection "1; mode=block"
-    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    # Force HTTPS
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # XSS Protection
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Content Security Policy (adjust as needed)
+    Header always set Content-Security-Policy "upgrade-insecure-requests"
 </IfModule>
 
-# ============================================
-# BLOG & LEGACY PAGE REDIRECTS (as needed)
-# ============================================
-# Add any additional redirects here
+# ======================================================
+# CACHE CONTROL
+# ======================================================
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>
+
+# ======================================================
+# COMPRESSION
+# ======================================================
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json
+</IfModule>
+
+# ======================================================
+# ERROR DOCUMENTS
+# ======================================================
+
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
