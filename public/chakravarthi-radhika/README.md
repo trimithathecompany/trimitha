@@ -1,4 +1,4 @@
-# Saiyam & Jenny — Wedding Invitation (static HTML/CSS/JS)
+# Lakshmi Chakravarthi - Radhika Wedding Invitation (static HTML/CSS/JS)
 
 Plain HTML/CSS/JS version of the invitation, no build tools, no React —
 just open `index.html` in a browser or upload the folder to any static host.
