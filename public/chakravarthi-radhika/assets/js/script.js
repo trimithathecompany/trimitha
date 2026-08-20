@@ -407,7 +407,8 @@
       "9.jpg",
       "10.jpg",
       "11.jpg",
-      "12.jpg"
+      "12.png",
+      "13.jpg"
     ];
 
     function toUrl(name) {
