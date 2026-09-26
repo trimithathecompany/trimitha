@@ -10,11 +10,8 @@
     <meta name="author" content="Trimitha">
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex, nofollow">
-
-    <!-- Canonical Tag -->
     <link rel="canonical" href="https://trimitha.co.in/emps/verify/">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://trimitha.co.in/emps/verify/">
     <meta property="og:title" content="Employee Verification | Trimitha">
@@ -23,22 +20,18 @@
     <meta property="og:site_name" content="Trimitha">
     <meta property="og:locale" content="en_US">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://trimitha.co.in/emps/verify/">
     <meta name="twitter:title" content="Employee Verification | Trimitha">
     <meta name="twitter:description" content="Verify the authenticity of a Trimitha employee identification card.">
     <meta name="twitter:image" content="https://trimitha.co.in/Images/Trimitha%20Logo.png">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -48,48 +41,18 @@
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                         heading: ['"Outfit"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
                     },
                     colors: {
-                        brand: {
-                            50: '#eef2ff',
-                            100: '#e0e7ff',
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            700: '#4338ca',
-                            900: '#312e81',
-                        },
-                        accent: {
-                            400: '#22d3ee',
-                            500: '#06b6d4',
-                        },
-                        dark: {
-                            bg: '#0a0f1e',
-                            card: '#10192e',
-                            border: '#20304d'
-                        }
-                    },
-                    animation: {
-                        'blob': 'blob 7s infinite',
-                        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(16px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
+                        brand: { 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' },
+                        accent: { 400: '#22d3ee', 500: '#06b6d4' },
+                        dark: { bg: '#0a0f1e', card: '#10192e', border: '#20304d' }
                     }
                 }
             }
         }
     </script>
 
-    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -98,11 +61,7 @@
       "description": "Verify the authenticity of a Trimitha employee identification card.",
       "url": "https://trimitha.co.in/emps/verify/",
       "inLanguage": "en-US",
-      "isPartOf": {
-        "@type": "Organization",
-        "name": "Trimitha",
-        "url": "https://trimitha.co.in"
-      }
+      "isPartOf": { "@type": "Organization", "name": "Trimitha", "url": "https://trimitha.co.in" }
     }
     </script>
 
@@ -122,140 +81,268 @@
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        .text-gradient-brand {
-            background: linear-gradient(to right, #4f46e5, #2563eb, #06b6d4);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
         body { overflow-x: hidden; width: 100%; }
 
         @media (max-width: 640px) {
-            .hero-padding { padding-top: 6.5rem !important; padding-bottom: 2rem !important; }
-            .hero-title { font-size: 1.9rem !important; line-height: 1.2 !important; }
-            .hero-subtitle { font-size: 1rem !important; }
+            .hero-title { font-size: 1.8rem !important; line-height: 1.2 !important; }
         }
 
-        /* Subtle security grid pattern behind the hero, on top of the blobs */
-        .security-grid {
-            background-image:
-                linear-gradient(rgba(79,70,229,0.06) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(79,70,229,0.06) 1px, transparent 1px);
-            background-size: 32px 32px;
-            mask-image: radial-gradient(ellipse 60% 60% at 50% 30%, black 40%, transparent 100%);
-        }
-        .dark .security-grid {
-            background-image:
-                linear-gradient(rgba(99,102,241,0.10) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(99,102,241,0.10) 1px, transparent 1px);
-            background-size: 32px 32px;
-        }
-
-        /* Verification card shell — same visual language as the employee-card
-           on the directory (rounded, soft shadow, gradient wash) */
-        .verify-card {
-            border-radius: 1.5rem;
-            background:
-                radial-gradient(circle at 50% 0%, rgba(99,102,241,0.08), transparent 55%),
-                #fff;
-            border: 1px solid rgb(226 232 240);
-            box-shadow: 0 20px 40px -20px rgba(15, 23, 42, 0.15);
-        }
-        .dark .verify-card {
-            background:
-                radial-gradient(circle at 50% 0%, rgba(99,102,241,0.14), transparent 55%),
-                #10192e;
-            border-color: #20304d;
-        }
-
-        .verify-avatar-ring {
-            width: 112px;
-            height: 112px;
-            flex-shrink: 0;
-            border-radius: 9999px;
-            padding: 4px;
-            background: linear-gradient(135deg, #4f46e5, #2563eb, #06b6d4);
-        }
-        .verify-avatar-wrap {
-            width: 100%;
-            height: 100%;
-            border-radius: 9999px;
+        /* ============================================================
+           SCENE — a slow, low-opacity scan line drifting behind the
+           hero. This replaces the old blurred "blob" background: one
+           quiet ambient motion instead of three competing ones.
+           ============================================================ */
+        .scanline-field {
+            position: absolute;
+            inset: 0;
             overflow: hidden;
-            background: linear-gradient(135deg, #0a0f1e, #1e293b);
-            border: 3px solid #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            pointer-events: none;
         }
-        .dark .verify-avatar-wrap { border-color: #10192e; }
-        .verify-avatar-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .scanline-field::before {
+            content: '';
+            position: absolute;
+            left: 0; right: 0;
+            height: 140px;
+            background: linear-gradient(180deg, transparent, rgba(6,182,212,0.10), transparent);
+            animation: driftDown 9s linear infinite;
+        }
+        .dark .scanline-field::before {
+            background: linear-gradient(180deg, transparent, rgba(34,211,238,0.14), transparent);
+        }
+        @keyframes driftDown {
+            0%   { transform: translateY(-160px); }
+            100% { transform: translateY(110vh); }
+        }
 
-        .status-icon-shell {
-            width: 76px;
-            height: 76px;
+        /* ============================================================
+           BADGE — the verification card itself. Modeled on a physical
+           ID card / access badge rather than a generic dashboard card:
+           always rendered as a dark "reader display" regardless of
+           site theme, since it represents a card being read by a
+           machine, not a page section.
+           ============================================================ */
+        .badge-card {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+            border-radius: 22px;
+            padding: 2rem 1.5rem 1.5rem;
+            background: linear-gradient(175deg, #16213b 0%, #0a0f1e 78%);
+            box-shadow:
+                0 30px 60px -24px rgba(0,0,0,0.55),
+                inset 0 0 0 1px rgba(148,163,184,0.14);
+            overflow: hidden;
+            color: #f1f5f9;
+        }
+        .badge-punch {
+            width: 44px;
+            height: 10px;
             border-radius: 9999px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin: 0 auto 1.5rem;
+            background: rgba(255,255,255,0.06);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.6), inset 0 -1px 0 rgba(255,255,255,0.04);
+        }
+        .badge-sheen {
+            position: absolute;
+            top: 0; bottom: 0;
+            left: -60%;
+            width: 45%;
+            background: linear-gradient(115deg, transparent, rgba(255,255,255,0.10), transparent);
+            transform: skewX(-12deg);
+            animation: sheen 1.6s ease-out 0.15s both;
+        }
+        @keyframes sheen {
+            0%   { left: -60%; opacity: 0; }
+            15%  { opacity: 1; }
+            100% { left: 130%; opacity: 0; }
         }
 
-        /* Loading spinner ring, styled with brand colors rather than a
-           generic grey spinner */
-        .verify-spinner {
-            width: 56px;
-            height: 56px;
+        .badge-photo-frame {
+            position: relative;
+            width: 92px;
+            height: 92px;
+            margin: 0 auto 1rem;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #0a0f1e;
+            border: 1px solid rgba(148,163,184,0.2);
+        }
+        .badge-photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .badge-photo-frame .fallback-icon {
+            width: 100%; height: 100%;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .badge-corner {
+            position: absolute;
+            width: 16px; height: 16px;
+            border-color: #22d3ee;
+            opacity: 0;
+            animation: cornerLockOn 0.6s ease-out 0.3s forwards;
+        }
+        .badge-corner.tl { top: 4px; left: 4px; border-top: 2px solid; border-left: 2px solid; border-radius: 4px 0 0 0; }
+        .badge-corner.tr { top: 4px; right: 4px; border-top: 2px solid; border-right: 2px solid; border-radius: 0 4px 0 0; }
+        .badge-corner.bl { bottom: 4px; left: 4px; border-bottom: 2px solid; border-left: 2px solid; border-radius: 0 0 0 4px; }
+        .badge-corner.br { bottom: 4px; right: 4px; border-bottom: 2px solid; border-right: 2px solid; border-radius: 0 0 4px 0; }
+        @keyframes cornerLockOn { from { opacity: 0; } to { opacity: 0.85; } }
+
+        .badge-barcode {
+            height: 13px;
+            border-radius: 2px;
+            margin: 1.1rem 0 0.9rem;
+            background-image: repeating-linear-gradient(
+                90deg,
+                rgba(226,232,240,0.5) 0px, rgba(226,232,240,0.5) 2px,
+                transparent 2px, transparent 4px,
+                rgba(226,232,240,0.22) 4px, rgba(226,232,240,0.22) 5px,
+                transparent 5px, transparent 8px
+            );
+        }
+        .badge-id {
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+        }
+
+        .badge-status-bar {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            height: 7px;
+        }
+        .badge-status-bar.active   { background: linear-gradient(90deg, #10b981, #34d399); }
+        .badge-status-bar.inactive { background: linear-gradient(90deg, #d97706, #f59e0b); }
+
+        /* Ink-stamp: the "verified" mark that punches onto the badge */
+        .badge-stamp {
+            position: absolute;
+            top: 14px; right: 14px;
+            width: 54px; height: 54px;
             border-radius: 9999px;
-            border: 4px solid rgba(79, 70, 229, 0.15);
-            border-top-color: #4f46e5;
-            animation: spin 0.9s linear infinite;
+            border: 2.5px solid #34d399;
+            display: flex; align-items: center; justify-content: center;
+            transform: rotate(-14deg) scale(0);
+            opacity: 0;
+            animation: stampDown 0.5s cubic-bezier(.2,1.4,.4,1) 0.55s forwards;
         }
-        .dark .verify-spinner { border-color: rgba(99, 102, 241, 0.2); border-top-color: #818cf8; }
-        @keyframes spin { to { transform: rotate(360deg); } }
+        .badge-stamp i { color: #34d399; font-size: 1.35rem; }
+        @keyframes stampDown {
+            0%   { transform: rotate(-14deg) scale(2.2); opacity: 0; }
+            60%  { transform: rotate(-14deg) scale(0.92); opacity: 1; }
+            100% { transform: rotate(-14deg) scale(1); opacity: 1; }
+        }
 
-        .verify-state {
-            display: none;
+        /* Rejected-card treatment for inactive / not-found — a redacted
+           silhouette rather than the full badge, since no personal
+           data may be shown in these states. */
+        .badge-reject {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+            border-radius: 22px;
+            padding: 2rem 1.5rem 1.5rem;
+            border: 1.5px dashed rgba(148,163,184,0.35);
+            background: rgba(148,163,184,0.04);
+            animation: rejectShake 0.4s ease-out 0.05s both;
         }
-        .verify-state.active {
-            display: block;
-            animation: fadeInUp 0.5s ease-out both;
+        .dark .badge-reject { background: rgba(15,23,42,0.4); }
+        @keyframes rejectShake {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-6px); }
+            40% { transform: translateX(5px); }
+            60% { transform: translateX(-3px); }
+            80% { transform: translateX(2px); }
         }
+        .redacted-bar {
+            height: 12px;
+            border-radius: 4px;
+            background: repeating-linear-gradient(
+                135deg,
+                rgba(148,163,184,0.35) 0px, rgba(148,163,184,0.35) 6px,
+                transparent 6px, transparent 12px
+            );
+        }
+
+        /* Scanner-reader loading skeleton */
+        .reader-frame {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+            border-radius: 22px;
+            padding: 2rem 1.5rem 1.5rem;
+            background: linear-gradient(175deg, #16213b 0%, #0a0f1e 78%);
+            overflow: hidden;
+            box-shadow: 0 30px 60px -24px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(148,163,184,0.14);
+        }
+        .reader-beam {
+            position: absolute;
+            left: 8%; right: 8%;
+            height: 3px;
+            border-radius: 2px;
+            background: #22d3ee;
+            box-shadow: 0 0 12px 2px rgba(34,211,238,0.7);
+            animation: beamSweep 1.3s ease-in-out infinite;
+        }
+        @keyframes beamSweep {
+            0%   { top: 14%; opacity: 0; }
+            10%  { opacity: 1; }
+            90%  { opacity: 1; }
+            100% { top: 86%; opacity: 0; }
+        }
+        .reader-placeholder-frame {
+            width: 92px; height: 92px; margin: 0 auto 1rem;
+            border-radius: 16px;
+            border: 1px dashed rgba(148,163,184,0.3);
+        }
+        .reader-placeholder-line {
+            height: 10px; border-radius: 4px;
+            background: rgba(148,163,184,0.18);
+        }
+
+        .verify-state { display: none; }
+        .verify-state.active { display: block; animation: fadeInUp 0.45s ease-out both; }
         @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(14px); }
+            0% { opacity: 0; transform: translateY(12px); }
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* Modal */
+        /* ============================================================
+           MODAL — presents the same badge component rather than a
+           separate icon-in-a-circle dialog.
+           ============================================================ */
         #verify-modal-backdrop {
-            position: fixed;
-            inset: 0;
-            background: rgba(10, 15, 30, 0.55);
+            position: fixed; inset: 0;
+            background: rgba(5, 8, 18, 0.65);
             backdrop-filter: blur(6px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             padding: 1rem;
             z-index: 100;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.25s ease;
         }
-        #verify-modal-backdrop.open {
-            opacity: 1;
-            pointer-events: auto;
-        }
+        #verify-modal-backdrop.open { opacity: 1; pointer-events: auto; }
         #verify-modal {
-            transform: translateY(16px) scale(0.98);
+            width: 100%; max-width: 340px;
+            transform: translateY(24px) scale(0.97);
             opacity: 0;
-            transition: transform 0.3s ease, opacity 0.3s ease;
+            transition: transform 0.32s cubic-bezier(.2,.9,.3,1), opacity 0.3s ease;
         }
-        #verify-modal-backdrop.open #verify-modal {
-            transform: translateY(0) scale(1);
-            opacity: 1;
+        #verify-modal-backdrop.open #verify-modal { transform: translateY(0) scale(1); opacity: 1; }
+
+        .modal-close-btn {
+            position: absolute; top: -14px; right: -14px;
+            width: 34px; height: 34px; border-radius: 9999px;
+            background: #fff; color: #0a0f1e;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .animate-blob, .verify-state.active, #verify-modal, #verify-modal-backdrop, .verify-spinner {
+            .badge-sheen, .badge-corner, .badge-stamp, .badge-reject,
+            .reader-beam, .scanline-field::before, .verify-state.active,
+            #verify-modal, #verify-modal-backdrop {
                 animation: none !important;
                 transition: none !important;
             }
@@ -268,12 +355,10 @@
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
             <div class="flex justify-between h-16 sm:h-20 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="/index.html" class="hover:opacity-80 transition-opacity flex items-center gap-2">
-                        <img src="/Images/Trimitha%20Logo.png" alt="Trimitha" class="h-7 sm:h-8 w-auto">
-                        <span class="font-heading font-bold text-lg sm:text-xl tracking-tight hidden sm:inline">Trimitha</span>
-                    </a>
-                </div>
+                <a href="/index.html" class="hover:opacity-80 transition-opacity flex items-center gap-2">
+                    <img src="/Images/Trimitha%20Logo.png" alt="Trimitha" class="h-7 sm:h-8 w-auto">
+                    <span class="font-heading font-bold text-lg sm:text-xl tracking-tight hidden sm:inline">Trimitha</span>
+                </a>
 
                 <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
                     <a href="/index.html" class="text-sm font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
@@ -295,128 +380,129 @@
     </nav>
 
     <!-- Hero / Verification Area -->
-    <section class="relative flex items-center justify-center hero-padding overflow-hidden px-3 sm:px-4" style="padding-top: 8rem; padding-bottom: 4rem;">
-        <div class="absolute inset-0 security-grid pointer-events-none"></div>
-        <div class="absolute top-0 -left-4 w-56 sm:w-72 h-56 sm:h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div class="absolute top-0 -right-4 w-56 sm:w-72 h-56 sm:h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" style="animation-delay: 2s;"></div>
-        <div class="absolute -bottom-8 left-10 sm:left-20 w-56 sm:w-72 h-56 sm:h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" style="animation-delay: 4s;"></div>
+    <section class="relative flex items-center justify-center overflow-hidden px-3 sm:px-4" style="padding-top: 8rem; padding-bottom: 4rem;">
+        <div class="scanline-field"></div>
 
         <div class="max-w-xl mx-auto px-3 sm:px-4 relative z-10 text-center w-full">
 
-            <div class="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1 rounded-full border border-indigo-400 dark:border-indigo-500 bg-indigo-50/50 dark:bg-indigo-900/30 backdrop-blur-sm">
-                <span class="text-[10px] sm:text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">
-                    <i class="fas fa-shield-halved mr-1"></i> Official Trimitha Verification
-                </span>
-            </div>
-
-            <h1 class="font-heading hero-title text-3xl sm:text-4xl font-bold mb-3 leading-[1.15]">
-                Employee Identity Verification
-            </h1>
-            <p class="hero-subtitle text-base sm:text-lg font-medium text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed mb-8 sm:mb-10">
-                Verify the authenticity of a Trimitha employee ID card.
+            <p class="text-xs sm:text-sm font-semibold text-cyan-600 dark:text-cyan-400 tracking-wide mb-2">
+                <i class="fas fa-shield-halved mr-1.5"></i>Official Trimitha verification
             </p>
 
-            <!-- ============================================================
-                 VERIFICATION STATES
-                 Only one of these is shown at a time, toggled by JS. Kept as
-                 sibling blocks (not built dynamically) so screen readers get
-                 a stable, predictable DOM with a shared aria-live region.
-                 ============================================================ -->
+            <h1 class="font-heading hero-title text-3xl sm:text-4xl font-bold mb-3 leading-[1.15]">
+                Employee identity verification
+            </h1>
+            <p class="text-base sm:text-lg font-medium text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed mb-9">
+                Scan result for a Trimitha employee ID card.
+            </p>
+
             <div aria-live="polite" aria-atomic="true">
 
                 <!-- LOADING STATE -->
                 <div id="state-loading" class="verify-state active">
-                    <div class="verify-card p-8 sm:p-10 flex flex-col items-center">
-                        <div class="verify-spinner mb-5" role="status"></div>
-                        <h2 class="font-heading text-lg sm:text-xl font-bold mb-1.5 dark:text-white">Verifying Employee ID</h2>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">Checking the official Trimitha employee registry…</p>
+                    <div class="reader-frame">
+                        <div class="reader-beam"></div>
+                        <div class="reader-placeholder-frame"></div>
+                        <div class="space-y-2 max-w-[160px] mx-auto mb-1">
+                            <div class="reader-placeholder-line w-full"></div>
+                            <div class="reader-placeholder-line w-2/3 mx-auto"></div>
+                        </div>
                     </div>
+                    <p class="mt-5 text-sm font-medium text-slate-500 dark:text-slate-400">
+                        Reading employee ID<span class="inline-block animate-pulse">…</span>
+                    </p>
                 </div>
 
                 <!-- SUCCESS / ACTIVE STATE -->
                 <div id="state-success" class="verify-state">
-                    <div class="status-icon-shell bg-emerald-100 dark:bg-emerald-500/15 mx-auto mb-4">
-                        <i class="fas fa-check text-3xl text-emerald-600 dark:text-emerald-400"></i>
+                    <div class="badge-card">
+                        <div class="badge-sheen"></div>
+                        <div class="badge-stamp"><i class="fas fa-check"></i></div>
+                        <div class="badge-punch"></div>
+
+                        <div class="badge-photo-frame" id="success-avatar-wrap">
+                            <div class="fallback-icon"><i class="fas fa-user-tie text-3xl text-slate-500"></i></div>
+                            <span class="badge-corner tl"></span>
+                            <span class="badge-corner tr"></span>
+                            <span class="badge-corner bl"></span>
+                            <span class="badge-corner br"></span>
+                        </div>
+
+                        <h3 id="success-name" class="font-heading font-bold text-lg text-white text-center"></h3>
+                        <p id="success-designation" class="text-sm font-medium text-cyan-400 text-center mt-0.5"></p>
+
+                        <div class="badge-barcode"></div>
+
+                        <div class="flex justify-between items-baseline text-xs text-slate-400 mb-1">
+                            <span>Employee ID</span>
+                            <span id="success-id" class="badge-id text-slate-100 text-sm"></span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-xs font-semibold text-emerald-400">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Active employee
+                        </div>
+
+                        <div class="badge-status-bar active"></div>
                     </div>
-                    <h2 class="font-heading text-xl sm:text-2xl font-bold mb-2 dark:text-white">Employee Verified</h2>
-                    <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-sm mx-auto mb-6">
-                        This employee ID has been successfully verified against the official Trimitha employee registry.
+
+                    <p class="mt-5 text-sm text-slate-600 dark:text-slate-300 max-w-sm mx-auto">
+                        Verified against the official Trimitha employee registry.
                     </p>
 
-                    <div class="verify-card p-6 sm:p-8 text-left">
-                        <div class="flex flex-col items-center text-center mb-5">
-                            <div class="verify-avatar-ring mb-4" id="success-avatar-ring">
-                                <div class="verify-avatar-wrap" id="success-avatar-wrap">
-                                    <i class="fas fa-user-tie text-3xl text-indigo-200/80"></i>
-                                </div>
-                            </div>
-                            <h3 id="success-name" class="font-heading font-bold text-lg text-slate-900 dark:text-white"></h3>
-                            <p id="success-designation" class="text-sm font-medium text-indigo-600 dark:text-indigo-400 mt-0.5"></p>
-                        </div>
-
-                        <div class="border-t border-slate-200 dark:border-dark-border pt-4 space-y-3">
-                            <div class="flex justify-between items-center text-sm">
-                                <span class="text-slate-500 dark:text-slate-400">Employee ID</span>
-                                <span id="success-id" class="font-heading font-semibold tracking-wide text-slate-900 dark:text-white"></span>
-                            </div>
-                            <div class="flex justify-between items-center text-sm">
-                                <span class="text-slate-500 dark:text-slate-400">Status</span>
-                                <span class="inline-flex items-center gap-1.5 font-semibold text-emerald-600 dark:text-emerald-400">
-                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Active Employee
-                                </span>
-                            </div>
-                        </div>
-
-                        <a id="success-profile-link" href="#" target="_blank" rel="noopener noreferrer"
-                           class="mt-6 w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-500 text-white text-sm font-semibold hover:opacity-90 transition-all shadow-md">
-                            View Official Profile <i class="fas fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
+                    <a id="success-profile-link" href="#" target="_blank" rel="noopener noreferrer"
+                       class="mt-5 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold hover:opacity-90 transition-all shadow-md">
+                        View official profile <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
 
                 <!-- INACTIVE / REVOKED STATE -->
                 <div id="state-inactive" class="verify-state">
-                    <div class="status-icon-shell bg-amber-100 dark:bg-amber-500/15 mx-auto mb-4">
-                        <i class="fas fa-triangle-exclamation text-3xl text-amber-600 dark:text-amber-400"></i>
+                    <div class="badge-reject">
+                        <div class="reader-placeholder-frame mb-4 flex items-center justify-center">
+                            <i class="fas fa-triangle-exclamation text-2xl text-amber-500"></i>
+                        </div>
+                        <div class="space-y-2 max-w-[160px] mx-auto mb-4">
+                            <div class="redacted-bar w-full"></div>
+                            <div class="redacted-bar w-2/3 mx-auto"></div>
+                        </div>
+                        <div class="flex justify-between items-baseline text-xs text-slate-400 mb-1 max-w-[200px] mx-auto">
+                            <span>Employee ID</span>
+                            <span id="inactive-id" class="badge-id text-slate-700 dark:text-slate-200 text-sm"></span>
+                        </div>
+                        <div class="flex items-center justify-center gap-1.5 text-xs font-semibold text-amber-500 mt-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Not currently active
+                        </div>
+                        <div class="badge-status-bar inactive"></div>
                     </div>
-                    <h2 class="font-heading text-xl sm:text-2xl font-bold mb-2 dark:text-white">Employee ID Not Active</h2>
-                    <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-sm mx-auto mb-6">
-                        This employee ID is registered with Trimitha but is not currently active.
+                    <h2 class="font-heading text-lg font-bold mt-5 mb-1.5 dark:text-white">Employee ID not active</h2>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 max-w-sm mx-auto">
+                        This ID is registered with Trimitha but is not currently active. Contact Trimitha if this seems wrong.
                     </p>
-                    <div class="verify-card p-6 sm:p-8">
-                        <p class="text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500 mb-1">Employee ID</p>
-                        <p id="inactive-id" class="font-heading font-semibold text-lg text-slate-900 dark:text-white mb-4"></p>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">
-                            If you believe this employee should be active, please contact Trimitha.
-                        </p>
-                    </div>
                 </div>
 
                 <!-- NOT FOUND STATE -->
                 <div id="state-notfound" class="verify-state">
-                    <div class="status-icon-shell bg-rose-100 dark:bg-rose-500/15 mx-auto mb-4">
-                        <i class="fas fa-xmark text-3xl text-rose-600 dark:text-rose-400"></i>
+                    <div class="badge-reject">
+                        <div class="reader-placeholder-frame mb-4 flex items-center justify-center">
+                            <i class="fas fa-xmark text-2xl text-rose-500"></i>
+                        </div>
+                        <div class="space-y-2 max-w-[160px] mx-auto mb-4">
+                            <div class="redacted-bar w-full"></div>
+                            <div class="redacted-bar w-2/3 mx-auto"></div>
+                        </div>
+                        <p class="text-xs uppercase tracking-wide text-slate-400 mb-1">Employee ID</p>
+                        <p id="notfound-id" class="badge-id text-sm text-slate-700 dark:text-slate-200 break-all"></p>
                     </div>
-                    <h2 class="font-heading text-xl sm:text-2xl font-bold mb-2 dark:text-white">Employee Not Verified</h2>
-                    <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-sm mx-auto mb-6">
-                        We could not verify this employee ID against the Trimitha employee registry.
+                    <h2 class="font-heading text-lg font-bold mt-5 mb-1.5 dark:text-white">Employee not verified</h2>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 max-w-sm mx-auto">
+                        This ID could not be matched to the Trimitha employee registry. Contact Trimitha if you believe this is an error.
                     </p>
-                    <div class="verify-card p-6 sm:p-8">
-                        <p class="text-xs uppercase tracking-wide text-slate-400 dark:text-slate-500 mb-1">Employee ID</p>
-                        <p id="notfound-id" class="font-heading font-semibold text-lg text-slate-900 dark:text-white mb-4 break-all"></p>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">
-                            Please contact Trimitha if you believe this is an error.
-                        </p>
-                    </div>
                 </div>
 
                 <!-- MISSING ID STATE -->
                 <div id="state-missing" class="verify-state">
-                    <div class="status-icon-shell bg-slate-200 dark:bg-slate-700/40 mx-auto mb-4">
-                        <i class="fas fa-circle-question text-3xl text-slate-500 dark:text-slate-300"></i>
-                    </div>
-                    <h2 class="font-heading text-xl sm:text-2xl font-bold mb-2 dark:text-white">Invalid Verification Request</h2>
-                    <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-sm mx-auto mb-6">
+                    <i class="fas fa-circle-question text-4xl text-slate-400 dark:text-slate-500 mb-3"></i>
+                    <h2 class="font-heading text-lg font-bold mb-1.5 dark:text-white">Invalid verification request</h2>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 max-w-sm mx-auto mb-5">
                         No employee ID was provided for verification.
                     </p>
                     <a href="/index.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold hover:opacity-90 transition-all shadow-md">
@@ -426,23 +512,15 @@
 
                 <!-- REGISTRY / NETWORK ERROR STATE -->
                 <div id="state-error" class="verify-state">
-                    <div class="status-icon-shell bg-slate-200 dark:bg-slate-700/40 mx-auto mb-4">
-                        <i class="fas fa-plug-circle-exclamation text-3xl text-slate-500 dark:text-slate-300"></i>
-                    </div>
-                    <h2 class="font-heading text-xl sm:text-2xl font-bold mb-2 dark:text-white">Verification Unavailable</h2>
-                    <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-sm mx-auto">
+                    <i class="fas fa-plug-circle-exclamation text-4xl text-slate-400 dark:text-slate-500 mb-3"></i>
+                    <h2 class="font-heading text-lg font-bold mb-1.5 dark:text-white">Verification unavailable</h2>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 max-w-sm mx-auto">
                         We couldn't reach the Trimitha employee registry right now. Please try again shortly.
                     </p>
                 </div>
             </div>
 
-            <p class="mt-8 text-xs sm:text-sm font-medium text-slate-400 dark:text-slate-500 tracking-wide">
-                <i class="fas fa-lock mr-1"></i> Secure • Official • Verified
-            </p>
-
-            <!-- Secondary, non-primary workflow: verify a different ID by hand.
-                 Collapsed by default so it never competes with the QR-driven flow. -->
-            <div class="mt-6">
+            <div class="mt-7">
                 <button id="verify-another-toggle" type="button"
                         class="text-xs sm:text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded">
                     Verify another ID
@@ -450,7 +528,7 @@
                 <form id="verify-another-form" class="hidden mt-3 flex items-center gap-2 justify-center" role="search">
                     <label for="verify-another-input" class="sr-only">Employee ID</label>
                     <input id="verify-another-input" type="text" placeholder="AB-XXXXXXXX" autocomplete="off"
-                           class="w-40 sm:w-48 px-3 py-2 rounded-full border border-slate-300 dark:border-dark-border bg-white dark:bg-dark-card text-sm text-center focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                           class="w-40 sm:w-48 px-3 py-2 rounded-full border border-slate-300 dark:border-dark-border bg-white dark:bg-dark-card text-sm text-center font-mono focus:outline-none focus:ring-2 focus:ring-indigo-500">
                     <button type="submit" class="px-4 py-2 rounded-full bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 transition-colors">Check</button>
                 </form>
             </div>
@@ -459,36 +537,49 @@
 
     <!-- SUCCESS MODAL -->
     <div id="verify-modal-backdrop" role="presentation">
-        <div id="verify-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading" aria-describedby="modal-message"
-             class="verify-card w-full max-w-sm p-6 sm:p-7 relative">
-            <button id="modal-close-btn" type="button" aria-label="Close"
-                    class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-full w-8 h-8 flex items-center justify-center">
-                <i class="fas fa-xmark"></i>
-            </button>
-
-            <div class="status-icon-shell bg-emerald-100 dark:bg-emerald-500/15 mx-auto mb-4">
-                <i class="fas fa-check text-2xl text-emerald-600 dark:text-emerald-400"></i>
-            </div>
-            <h2 id="modal-heading" class="font-heading text-lg font-bold text-center mb-1 dark:text-white">Employee Verified</h2>
-            <p id="modal-message" class="text-xs sm:text-sm text-center text-slate-500 dark:text-slate-400 mb-4">
-                The employee ID has been successfully verified.
-            </p>
-
-            <div class="bg-slate-50 dark:bg-dark-bg/60 rounded-xl p-4 mb-5 text-center border border-slate-200 dark:border-dark-border">
-                <p id="modal-name" class="font-heading font-bold text-slate-900 dark:text-white"></p>
-                <p id="modal-designation" class="text-xs font-medium text-indigo-600 dark:text-indigo-400 mt-0.5"></p>
-                <p id="modal-id" class="text-xs text-slate-400 dark:text-slate-500 mt-2 tracking-wide"></p>
-            </div>
-
-            <div class="flex flex-col gap-2">
-                <a id="modal-profile-link" href="#" target="_blank" rel="noopener noreferrer"
-                   class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-500 text-white text-sm font-semibold hover:opacity-90 transition-all shadow-md">
-                    View Employee Profile
-                </a>
-                <button id="modal-continue-btn" type="button"
-                        class="w-full px-4 py-3 rounded-full border border-slate-300 dark:border-dark-border text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-                    Close
+        <div id="verify-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading" aria-describedby="modal-message">
+            <div class="badge-card" style="padding-top: 2.25rem;">
+                <button id="modal-close-btn" type="button" aria-label="Close" class="modal-close-btn">
+                    <i class="fas fa-xmark text-sm"></i>
                 </button>
+
+                <div class="badge-sheen" id="modal-sheen"></div>
+                <div class="badge-stamp" id="modal-stamp"><i class="fas fa-check"></i></div>
+                <div class="badge-punch"></div>
+
+                <div class="badge-photo-frame" id="modal-avatar-wrap">
+                    <div class="fallback-icon"><i class="fas fa-user-tie text-3xl text-slate-500"></i></div>
+                    <span class="badge-corner tl"></span>
+                    <span class="badge-corner tr"></span>
+                    <span class="badge-corner bl"></span>
+                    <span class="badge-corner br"></span>
+                </div>
+
+                <h2 id="modal-heading" class="font-heading font-bold text-lg text-white text-center"></h2>
+                <p id="modal-designation" class="text-sm font-medium text-cyan-400 text-center mt-0.5"></p>
+
+                <div class="badge-barcode"></div>
+
+                <div class="flex justify-between items-baseline text-xs text-slate-400 mb-1">
+                    <span>Employee ID</span>
+                    <span id="modal-id" class="badge-id text-slate-100 text-sm"></span>
+                </div>
+                <p id="modal-message" class="text-xs text-slate-400 mt-2 mb-4">
+                    Successfully verified against the Trimitha employee registry.
+                </p>
+
+                <div class="flex flex-col gap-2">
+                    <a id="modal-profile-link" href="#" target="_blank" rel="noopener noreferrer"
+                       class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-white text-slate-900 text-sm font-semibold hover:opacity-90 transition-all">
+                        View employee profile
+                    </a>
+                    <button id="modal-continue-btn" type="button"
+                            class="w-full px-4 py-2.5 rounded-full border border-slate-600 text-slate-200 text-sm font-semibold hover:bg-slate-800 transition-colors">
+                        Close
+                    </button>
+                </div>
+
+                <div class="badge-status-bar active"></div>
             </div>
         </div>
     </div>
@@ -516,16 +607,13 @@
         </div>
     </footer>
 
-    <!-- Employee verification data (registry + config).
-         Kept as its own file so it can be maintained independently of
-         the page markup/logic, and swapped for a real API-backed
-         module later without touching this file. -->
+    <!-- Employee verification data (registry + config), kept in its own
+         file so it can be maintained independently of this page. -->
     <script src="employee-data.js"></script>
 
-    <!-- Scripts -->
     <script>
         /* ============================================================
-           THEME TOGGLE (shared behavior with the rest of the site)
+           THEME TOGGLE
            ============================================================ */
         const themeToggle = document.getElementById('theme-toggle');
         const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
@@ -535,10 +623,7 @@
             htmlEl.classList.toggle('dark');
             try {
                 localStorage.setItem('theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');
-            } catch (err) {
-                // localStorage may be unavailable (private browsing, etc.) —
-                // theme still works for the current page load.
-            }
+            } catch (err) { /* storage may be unavailable; theme still works this load */ }
         }
 
         try {
@@ -561,29 +646,18 @@
         });
 
         /* ============================================================
-           CONFIGURATION + EMPLOYEE REGISTRY
-           Both now live in the external file employee-data.js (loaded
-           via <script src="employee-data.js"> in <head>), which defines
-           the globals VERIFY_CONFIG and EMPLOYEE_REGISTRY used below.
-           See that file's own header comment for the security notes
-           and the swap-to-API instructions.
-           ============================================================ */
-
-        /* ============================================================
            URL PARSING + NORMALIZATION
            ============================================================ */
         function getRawEmployeeIdFromUrl() {
             const segments = window.location.pathname.split('/').filter(Boolean);
             const verifyIndex = segments.lastIndexOf('verify');
-            if (verifyIndex === -1 || verifyIndex === segments.length - 1) {
-                return null; // no id segment present, e.g. /emps/verify/ or /emps/verify/index.html
-            }
+            if (verifyIndex === -1 || verifyIndex === segments.length - 1) return null;
             const last = segments[segments.length - 1];
             if (last.toLowerCase() === 'index.html') return null;
             try {
                 return decodeURIComponent(last);
             } catch (err) {
-                return null; // malformed percent-encoding
+                return null;
             }
         }
 
@@ -597,26 +671,13 @@
         }
 
         /* ============================================================
-           VERIFICATION
-           ------------------------------------------------------------
-           This is the single swap point for a real backend. Today it
-           resolves against the local EMPLOYEE_REGISTRY; once an API
-           exists, replace the body with a fetch() to
-           VERIFY_CONFIG.registryEndpoint + encodeURIComponent(id) and
-           keep the same return shape so nothing else on the page needs
-           to change.
+           VERIFICATION — single swap point for a real backend later.
            ============================================================ */
         async function verifyEmployeeId(normalizedId) {
-            // Simulated network latency so the loading state reads as a
-            // genuine check rather than a client-side illusion.
-            await new Promise(resolve => setTimeout(resolve, 550));
-
+            await new Promise(resolve => setTimeout(resolve, 700));
             try {
                 const match = EMPLOYEE_REGISTRY.find(emp => emp.id === normalizedId);
-
-                if (!match) {
-                    return { verified: false, status: 'not_found' };
-                }
+                if (!match) return { verified: false, status: 'not_found' };
                 if (match.status !== 'active') {
                     return { verified: false, status: match.status, employee: sanitizeEmployeeForDisplay(match) };
                 }
@@ -627,9 +688,6 @@
             }
         }
 
-        // Only ever pass along the fields that are safe to render. This
-        // is also where a real API response would be validated/shaped
-        // before it touches the DOM.
         function sanitizeEmployeeForDisplay(employee) {
             return {
                 id: String(employee.id || ''),
@@ -654,13 +712,24 @@
 
         function showState(name) {
             Object.entries(stateEls).forEach(([key, el]) => {
-                if (!el) return;
-                el.classList.toggle('active', key === name);
+                if (el) el.classList.toggle('active', key === name);
             });
         }
 
+        // Forces a CSS animation to replay (used when "Verify another ID"
+        // re-renders a state that's already on screen).
+        function replayAnimation(el) {
+            if (!el) return;
+            el.style.animation = 'none';
+            void el.offsetWidth; // force reflow
+            el.style.animation = '';
+        }
+
         function buildAvatar(container, employee) {
-            container.replaceChildren();
+            const fallback = container.querySelector('.fallback-icon');
+            const existingImg = container.querySelector('img');
+            if (existingImg) existingImg.remove();
+
             if (employee.photo) {
                 const img = document.createElement('img');
                 img.src = employee.photo;
@@ -669,18 +738,14 @@
                     ? `Portrait of ${employee.name}, ${employee.designation}`
                     : `Portrait of ${employee.name}`;
                 img.addEventListener('error', () => {
-                    container.replaceChildren(buildAvatarFallback());
+                    img.remove();
+                    if (fallback) fallback.style.display = 'flex';
                 });
-                container.appendChild(img);
-            } else {
-                container.appendChild(buildAvatarFallback());
+                if (fallback) fallback.style.display = 'none';
+                container.insertBefore(img, container.firstChild);
+            } else if (fallback) {
+                fallback.style.display = 'flex';
             }
-        }
-
-        function buildAvatarFallback() {
-            const icon = document.createElement('i');
-            icon.className = 'fas fa-user-tie text-3xl text-indigo-200/80';
-            return icon;
         }
 
         function renderSuccess(employee) {
@@ -698,33 +763,27 @@
             }
 
             showState('success');
+            replayAnimation(document.querySelector('#state-success .badge-card'));
             openSuccessModal(employee);
         }
 
         function renderInactive(employee) {
-            document.getElementById('inactive-id').textContent = employee.id;
+            document.getElementById('inactive-id').textContent = employee.id || '';
             showState('inactive');
+            replayAnimation(document.querySelector('#state-inactive .badge-reject'));
         }
 
         function renderNotFound(displayId) {
             document.getElementById('notfound-id').textContent = displayId || '(none provided)';
             showState('notfound');
+            replayAnimation(document.querySelector('#state-notfound .badge-reject'));
         }
 
-        function renderMissing() {
-            showState('missing');
-        }
-
-        function renderRegistryError() {
-            showState('error');
-        }
+        function renderMissing() { showState('missing'); }
+        function renderRegistryError() { showState('error'); }
 
         /* ============================================================
            SUCCESS MODAL
-           ------------------------------------------------------------
-           Handles open/close, Escape-to-close, focus trapping and
-           returning focus to whatever triggered it. Never uses
-           alert()/confirm().
            ============================================================ */
         const modalBackdrop = document.getElementById('verify-modal-backdrop');
         const modalDialog = document.getElementById('verify-modal');
@@ -739,9 +798,10 @@
         }
 
         function openSuccessModal(employee) {
-            document.getElementById('modal-name').textContent = employee.name;
+            document.getElementById('modal-heading').textContent = employee.name;
             document.getElementById('modal-designation').textContent = employee.designation || 'Trimitha Team';
             document.getElementById('modal-id').textContent = employee.id;
+            buildAvatar(document.getElementById('modal-avatar-wrap'), employee);
 
             const profileLink = document.getElementById('modal-profile-link');
             if (employee.profile) {
@@ -750,6 +810,9 @@
             } else {
                 profileLink.classList.add('hidden');
             }
+
+            replayAnimation(document.getElementById('modal-sheen'));
+            replayAnimation(document.getElementById('modal-stamp'));
 
             lastFocusedBeforeModal = document.activeElement;
             modalBackdrop.classList.add('open');
@@ -769,32 +832,18 @@
 
         modalCloseBtn.addEventListener('click', closeSuccessModal);
         modalContinueBtn.addEventListener('click', closeSuccessModal);
-        modalBackdrop.addEventListener('click', (e) => {
-            if (e.target === modalBackdrop) closeSuccessModal();
-        });
+        modalBackdrop.addEventListener('click', (e) => { if (e.target === modalBackdrop) closeSuccessModal(); });
 
         document.addEventListener('keydown', (e) => {
             if (!modalBackdrop.classList.contains('open')) return;
-
-            if (e.key === 'Escape') {
-                closeSuccessModal();
-                return;
-            }
-
-            // Simple focus trap: keep Tab cycling within the modal.
+            if (e.key === 'Escape') { closeSuccessModal(); return; }
             if (e.key === 'Tab') {
                 const focusable = getFocusableModalEls();
                 if (!focusable.length) return;
                 const first = focusable[0];
                 const last = focusable[focusable.length - 1];
-
-                if (e.shiftKey && document.activeElement === first) {
-                    e.preventDefault();
-                    last.focus();
-                } else if (!e.shiftKey && document.activeElement === last) {
-                    e.preventDefault();
-                    first.focus();
-                }
+                if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+                else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
             }
         });
 
@@ -803,6 +852,7 @@
            ============================================================ */
         async function runVerification(rawId) {
             showState('loading');
+            replayAnimation(document.querySelector('#state-loading .reader-frame'));
 
             if (rawId === null || rawId === undefined || rawId.trim() === '') {
                 renderMissing();
@@ -825,10 +875,7 @@
                 return;
             }
 
-            if (!result || typeof result !== 'object') {
-                renderRegistryError();
-                return;
-            }
+            if (!result || typeof result !== 'object') { renderRegistryError(); return; }
 
             switch (result.status) {
                 case 'active':
@@ -846,8 +893,6 @@
             }
         }
 
-        // Secondary manual-check form (optional convenience, not the
-        // primary QR-driven workflow).
         const verifyAnotherToggle = document.getElementById('verify-another-toggle');
         const verifyAnotherForm = document.getElementById('verify-another-form');
         const verifyAnotherInput = document.getElementById('verify-another-input');
@@ -867,7 +912,6 @@
             runVerification(value);
         });
 
-        // Kick off verification using whatever ID (if any) is in the URL.
         runVerification(getRawEmployeeIdFromUrl());
     </script>
 </body>
