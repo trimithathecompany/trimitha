@@ -11,6 +11,10 @@
     {
       "source": "/founder/index",
       "destination": "/founder/"
+    },
+    {
+      "source": "/emps/verify/:id",
+      "destination": "/emps/verify/index.html"
     }
   ],
   "redirects": [
@@ -65,10 +69,6 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
-    },
-    {
-      "source": "/emps/verify/:id",
-      "destination": "/emps/verify/index.html"
     }
   ]
 }
