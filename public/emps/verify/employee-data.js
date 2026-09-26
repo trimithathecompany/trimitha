@@ -71,7 +71,7 @@ const EMPLOYEE_REGISTRY = [
         id: 'PT-08010700',            // "Polanki Thrinath" -> P + T
         name: 'Polanki Thrinath',
         designation: 'CEO/Founder',
-        photo: null,                  // e.g. '/emps/images/ravi-kumar-1x1.png'
+        photo: '/emps/imgs/polanki-thrinath-founder-trimitha-2.png',                  // e.g. '/emps/images/ravi-kumar-1x1.png'
         profile: '/founder/',
         status: 'active'              // 'active' | 'inactive' | 'revoked'
     },
@@ -79,7 +79,7 @@ const EMPLOYEE_REGISTRY = [
         id: 'CJ-26057900',            // "Janaki Chedulla" -> J + C
         name: 'Chedulla Janaki',
         designation: 'Chief Financial Officer',
-        photo: null,
+        photo: '/emps/imgs/janaki-chedulla-cfo-trimitha-1.png',
         profile: '/emps/cfo.html',
         status: 'active'
     },
@@ -87,8 +87,16 @@ const EMPLOYEE_REGISTRY = [
         id: 'PD-19110800',            // "Arjun Sharma" -> A + S
         name: 'Polanki Dhanusha',
         designation: 'Chief Information Officer',
-        photo: null,
+        photo: '/emps/imgs/dhanusha-polanki-cio-trimitha-1.png',
         profile: '/emps/cio.html',
+        status: 'active'
+    },
+    {
+        id: 'PB-25052300',            // "Arjun Sharma" -> A + S
+        name: 'Polanki Bala Thripura',
+        designation: 'COO/President',
+        photo: '/emps/imgs/polanki-bala-thripura-coo-trimitha-1.png',
+        profile: '/emps/coo.html',
         status: 'active'
     }
 ];
