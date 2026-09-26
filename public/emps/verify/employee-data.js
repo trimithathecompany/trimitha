@@ -72,7 +72,7 @@ const EMPLOYEE_REGISTRY = [
         name: 'Polanki Thrinath',
         designation: 'CEO/Founder',
         photo: null,                  // e.g. '/emps/images/ravi-kumar-1x1.png'
-        profile: './founder/',
+        profile: '/founder/',
         status: 'active'              // 'active' | 'inactive' | 'revoked'
     },
     {
