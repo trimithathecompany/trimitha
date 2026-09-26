@@ -87,7 +87,7 @@ const EMPLOYEE_REGISTRY = [
         id: 'PD-19110800',            // "Arjun Sharma" -> A + S
         name: 'Polanki Dhanusha',
         designation: 'Chief Information Officer',
-        photo: '/emps/imgs/dhanusha-polanki-cio-trimitha-1.png',
+        photo: '/emps/imgs/polanki-dhanusha-cio-trimitha-1.png',
         profile: '/emps/cio.html',
         status: 'active'
     },
